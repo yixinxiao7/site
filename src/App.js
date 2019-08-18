@@ -1,26 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
+import MainPage from "./pages/home_page.jsx";
+import AboutMe from "./pages/about_me.jsx";
+import NotFound from "./pages/404.jsx";
+import Portfolio from './pages/portfolio.jsx';
+import ContactMe from './pages/contact_me.jsx';
+import ResearchPage from './pages/research.jsx';
+
+
+class App extends Component{
+  render(){
+    return (
+        <HashRouter>
+          <Switch>
+            <Route exact path="/" component={MainPage}/>
+            <Route exact path="/aboutMe" component={AboutMe}/>
+            <Route exact path="/portfolio" component={Portfolio}/>
+            <Route exact path="/research" component={ResearchPage}/> 
+            <Route exact path="/contactMe" component={ContactMe}/>
+            <Route exact path="/404" component = {NotFound}/>
+            <Redirect to="/404"/>
+          </Switch>
+        </HashRouter>
+    );
+  }
 }
 
 export default App;

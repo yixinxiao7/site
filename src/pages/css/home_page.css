@@ -1,0 +1,39 @@
+.main-text-color{
+    color: #66FCF1;
+}
+
+.second-text-color{
+    color: #45A29E;
+}
+
+.larger-text{
+    font-size: 50px;
+}
+.medium-text{
+    font-size: 20px;
+}
+
+.image-resize{
+    width: 170px;
+}
+
+.image-decorate{
+    border: solid;
+    border-radius: 50%;
+    border-color: #C5C6C7;
+}
+
+.stretch{
+    height:100%;
+}
+.bg-trans{
+    background: transparent;
+}
+.whole-page{
+    height: 100%
+}
+
+.button-color{
+    background-color: #45A29E;
+    border-color: #45A29E;
+}
