@@ -6,11 +6,16 @@
 }
 .normal-text{
     font-size: 20px;
+    vertical-align: center;
 }
 .white{
     color:#C5C6C7;
 }
 .navbar-custom{
     background: transparent;
+}
+
+.va{
+    vertical-align: center;
 }
 
