@@ -15,7 +15,7 @@ const renderDescription = () =>{
     return(
         <>
             <p className = "text-sec p-3">
-                Hey, I'm Yixin! I'm currently studying at the University of Michigan, Ann Arbor, pursuing my Bachelor's degree with a major in Computer Science from the College of Engineering and a minor in Business. <br/><br/> Outside of my academics, I am also a research assistant of the Crowds and Machines Lab of U-M, where I have worked with <a href = "/research" className="db">Machine Learning, Deep Learning, and Active Learning</a>. <br/><br/> Additionally, as a part of the Web Development team of the Michigan Hackers, I am working on the front-end of web application which will help future students better plan our their schedules for upcoming semesters. After the completion of the app, I plan learning back-end development for future projects.
+                Hey, I'm Yixin! I'm currently studying at the University of Michigan, Ann Arbor, pursuing my Bachelor's degree with a major in Computer Science from the College of Engineering and a minor in Business. <br/><br/> Outside of my academics, I am also a research assistant of the Crowds and Machines Lab of U-M, where I have worked with <a href = "#/research" className="db">Machine Learning, Deep Learning, and Active Learning</a>. <br/><br/> Additionally, as a part of the Web Development team of the Michigan Hackers, I am working on the front-end of web application which will help future students better plan our their schedules for upcoming semesters. After the completion of the app, I plan learning back-end development for future projects.
             </p>
 
         </>

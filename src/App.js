@@ -10,7 +10,6 @@ import Portfolio from './pages/portfolio.jsx';
 import ContactMe from './pages/contact_me.jsx';
 import ResearchPage from './pages/research.jsx';
 
-
 class App extends Component{
   render(){
     return (

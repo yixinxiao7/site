@@ -11,7 +11,7 @@ const renderJumbotron = () =>{
         <p align = "center" className = "second-text-color medium-text">
             I'm a junior studying at the University of Michigan, Ann Arbor.
         </p>
-        <div align = "center"> <Button href= "/aboutMe" size="lg" className="button-color">Learn more about me</Button> </div>
+        <div align = "center"> <Button href= "#/aboutMe" size="lg" className="button-color">Learn more about me</Button> </div>
     </Jumbotron>
     );
 }
