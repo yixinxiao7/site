@@ -14,7 +14,9 @@
 }
 
 .image-resize{
-    width: 170px;
+    height: auto;
+    width:20%;
+    
 }
 
 .image-decorate{
@@ -37,3 +39,9 @@
     background-color: #45A29E;
     border-color: #45A29E;
 }
+
+@media only screen and (max-width: 500px) {
+    .image-resize{
+        width: 50%;
+    }
+  }
