@@ -22,8 +22,8 @@ export default class MainPage extends React.Component{
                 <Row>
                     <Col>{renderNavBar()}</Col>
                 </Row>
-                <Row className = "p-3">
-                    <img src = {Pic} className = "image-resize image-decorate mx-auto"/>
+                <Row>
+                    <Image src = {Pic} className = "image-resize image-decorate mx-auto"/>
                 </Row>
                 <Row>
                     <Col>{renderJumbotron()}</Col>
