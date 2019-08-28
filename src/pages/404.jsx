@@ -6,7 +6,7 @@ const NotFound = () => {
         <div className="color">
             <h3> 404: NOT FOUND</h3>
             <p className="bigger-text">but here's a cute picture of a corgi :)</p>
-            <img src={DOGGO} className="image-resize"/>
+            <img src={DOGGO} className="picture-resize"/>
         </div>
     );
 }
