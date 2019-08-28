@@ -15,7 +15,7 @@
 
 .image-resize{
     width:20%;
-    
+    height: auto;
 }
 
 .image-decorate{
@@ -42,5 +42,7 @@
 @media only screen and (max-width: 500px) {
     .image-resize{
         width: 50%;
+        height: auto;
+        display:block;
     }
   }
