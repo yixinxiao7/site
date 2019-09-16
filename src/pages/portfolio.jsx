@@ -2,14 +2,12 @@ import React from 'react';
 import {Bootstrap, Row, Col, Container, Image, Card, CardDeck, Button} from 'react-bootstrap';
 import {renderNavBar} from '../global_component/nav_bar.jsx';
 import {IoIosPaper} from "react-icons/io";
-import {IoIosSchool} from "react-icons/io";
 import './css/portfolio.css'
 import Graph from '../images/graph.jpg';
 import Stock from '../images/stocks.jpg';
 import Files from '../images/log_mng.jpg';
 import Puzzle from '../images/puzzle.jpg';
 import Resume from '../resume/Resume.pdf';
-// import Transcript from '../resume/transcript.pdf';
 
 const renderResume=()=>{
     return(
@@ -27,22 +25,6 @@ const renderResume=()=>{
         </Card>
     );
 }
-// const renderTranscript=()=>{
-//     return(
-//         <Card className="bg-db" style={{ width: '18rem' }}>
-//             <Card.Body>
-//                 <div align="center">
-//                     <a href={Transcript} target="_blank">
-//                         <IoIosSchool size={120} className="dg"/>
-//                     </a>
-//                 </div>
-//             </Card.Body>
-//             <Card.Footer>
-//                     <Card.Title align="center"><a href={Transcript} target="_blank"  className="lb">Transcript</a></Card.Title>
-//             </Card.Footer>
-//         </Card>
-//     );
-// }
 const renderCards=()=>{
     
     return(
@@ -139,16 +121,3 @@ export default class Portfolio extends React.Component{
         );
     }
 }
-
-
-// <div align="right" className="padding-r">
-//                             <IoIosPaper size={120}/>
-//                             <br/>
-//                             <a href={Resume} className="bigger-font-p">Resume</a>
-//                         </div>
-
-// <div align="left" className="padding-l">
-// <IoIosSchool size={120}/>
-// <br/>
-// <a href={Transcript} className="bigger-font-p">Transcript</a>
-// </div>

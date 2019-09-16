@@ -22,7 +22,7 @@ export default class MainPage extends React.Component{
                 <Row>
                     <Col>{renderNavBar()}</Col>
                 </Row>
-                <Row>
+                <Row className="py-3">
                     <Image src = {Pic} className = "image-resize image-decorate mx-auto"/>
                 </Row>
                 <Row>
