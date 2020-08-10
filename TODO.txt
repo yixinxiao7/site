@@ -1,0 +1,4 @@
+stretch background image
+only have lines for background image
+switch research and portfolio
+merge some content in contact me into research
