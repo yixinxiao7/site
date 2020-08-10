@@ -9,9 +9,21 @@ const renderJumbotron = () =>{
         <Jumbotron className = "bg-trans pt-1">
         <h1 align="center" className = "main-text-color larger-text">Hi, I'm Yixin!</h1>
         <p align = "center" className = "second-text-color medium-text">
-            I'm a junior studying at the University of Michigan, Ann Arbor.
+            I'm a senior studying at the University of Michigan, Ann Arbor.
         </p>
-        <div align = "center"> <Button href= "#/aboutMe" size="lg" className="button-color">Learn more about me</Button> </div>
+        <div align = "center"> 
+            {/* <Button href= "#/aboutMe" size="lg" className="button-decorate">Learn more about me</Button>  */}
+            <ul>
+                <p>
+                    <a href="#/aboutMe" className="px-auto py-auto">
+                        <br/>
+                        Learn more about me!
+                        <br/>
+                        <br/>
+                    </a>
+                </p>
+            </ul>
+        </div>
     </Jumbotron>
     );
 }
@@ -22,24 +34,13 @@ export default class MainPage extends React.Component{
                 <Row>
                     <Col>{renderNavBar()}</Col>
                 </Row>
-                <Row className="py-3">
-                    <Image src = {Pic} className = "image-resize image-decorate mx-auto"/>
+                <Row className="py-5">
+                    <Image src = {Pic} className = "image-resize image-decorate"/>
                 </Row>
-                <Row>
+                <Row className="py-2">
                     <Col>{renderJumbotron()}</Col>
                 </Row>
             </Container>
         );
     }
 }
-{/* <Row>
-                    <Col>{renderNavBar()}</Col>
-                 </Row>
-                <Row>
-                    <Col md = {4} align = "left" >
-                        <Image src= {Pic}  rounded className = "image-rotate"/>
-                    </Col>
-                    <Col md = {8}>
-                        {renderJumbotron()}            
-                    </Col>
-                </Row> */}

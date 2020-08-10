@@ -1,6 +1,6 @@
 .resize-image{
     width:30%;
-    float: left;
+    float:left;
     border-radius: 10%;
 }
 
@@ -15,13 +15,23 @@
     float: right;
 }
 .text-sec{
-    color: #C5C6C7;
+    color: #383b3e;
     font-size: 23px;
 }
 
+.left-border{
+    border-left: solid black;
+}
+.center-image{
+    text-align:center;
+    display:inline-block;
+}
 .db{
-    color: #66FCF1;
+   
     font-size:23px;
+}
+.ital{
+    font-style:italic;
 }
 .apply-border{
     border: solid;
