@@ -2,44 +2,32 @@ import React from 'react';
 import {Row, Col, Container, Image, Button,Jumbotron} from 'react-bootstrap';
 import Pic from '../images/YX.jpg';
 import './css/home_page.css'
+import './css/global_comp.css'
 import {renderNavBar} from '../global_component/nav_bar.jsx';
 
 const renderJumbotron = () =>{
     return(
-        <Jumbotron className = "bg-trans pt-1">
-        <h1 align="center" className = "main-text-color larger-text">Hi, I'm Yixin!</h1>
-        <p align = "center" className = "second-text-color medium-text">
-            I'm a senior studying at the University of Michigan, Ann Arbor.
-        </p>
-        <div align = "center"> 
-            {/* <Button href= "#/aboutMe" size="lg" className="button-decorate">Learn more about me</Button>  */}
-            <ul>
-                <p>
-                    <a href="#/aboutMe" className="px-auto py-auto">
-                        <br/>
-                        Learn more about me!
-                        <br/>
-                        <br/>
-                    </a>
-                </p>
-            </ul>
-        </div>
-    </Jumbotron>
+        <Jumbotron align="center" className = "bg-trans">
+            <div className="vcenter">
+                <h1 className="large-font">
+                    Hello, I'm <span className="light-green">Yixin</span>!
+                </h1>   
+                <h3>
+                    I'm a passionate <span className="dark-green">student</span>
+                    , driven <span className="dark-green">software engineer</span>
+                    , and avid <span className="dark-green"> corgi-lover</span>!
+                    </h3>
+                <Button variant="outline-light" href="#/aboutMe" className="mt-2">More about me!</Button>
+            </div>
+        </Jumbotron>
     );
 }
+
 export default class MainPage extends React.Component{
     render(){
         return (
-            <Container className="stretch">
-                <Row>
-                    <Col>{renderNavBar()}</Col>
-                </Row>
-                <Row className="py-5">
-                    <Image src = {Pic} className = "image-resize image-decorate"/>
-                </Row>
-                <Row className="py-2">
-                    <Col>{renderJumbotron()}</Col>
-                </Row>
+            <Container className="stretch vertical-stretch">
+                {renderJumbotron()}  
             </Container>
         );
     }

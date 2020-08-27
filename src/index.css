@@ -1,13 +1,7 @@
 body {
   margin: 0;
-  /* background-color: #1F2833; */
-  /* background-image: radial-gradient(#72777D,#1F2833,  #0B0C10); */
-  background-image: url('./images/lined_paper_3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-image: linear-gradient(#ADD8E6, white); */
-  /* background-attachment: fixed; */
-  font-family: 'Kalam', cursive;
+  background-color: #6b6369;
+  font-family: 'Alata', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,6 +17,6 @@ html, body, #app, #app>div {
 }
 
 code {
-  font-family: 'Kalam', cursive;
+  font-family: 'Alata', sans-serif;
 }
 
