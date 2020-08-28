@@ -15,9 +15,9 @@ const renderJumbotron = () =>{
                 <h3>
                     I'm a passionate <span className="dark-green">student</span>
                     , driven <span className="dark-green">software engineer</span>
-                    , and avid <span className="dark-green"> corgi-lover</span>!
+                    , and avid <span className="dark-green"> corgi-lover</span>.
                     </h3>
-                <Button variant="outline-light" href="#/aboutMe" className="mt-2">More about me!</Button>
+                <Button variant="outline-light" href="#/aboutMe" className="mt-2">More about me</Button>
             </div>
         </Jumbotron>
     );
