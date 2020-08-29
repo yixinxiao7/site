@@ -1,5 +1,5 @@
 import React from 'react';
-import {Bootstrap, Row, Col, Container, Image} from 'react-bootstrap';
+import {Button, Row, Col, Container, Image, Card, Overlay, Tooltip} from 'react-bootstrap';
 import SchoolLogo from '../images/m.png';
 import Me from '../images/final_me.png';
 import './css/about_me.css';
@@ -7,23 +7,57 @@ import './css/global_comp.css';
 import Resume from '../resume/Resume.pdf';
 import {renderNavBar} from '../global_component/nav_bar.jsx';
 import {FaGlasses, FaRobot} from "react-icons/fa";
+import {IoIosPhonePortrait, IoIosMail,IoLogoLinkedin} from "react-icons/io";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 
+function Example() {
+    const [show, setShow] = React.useState(false);
+    const target = React.useRef(null);
+  
+    return (
+      <>
+      <i class="fa fa-phone" Style="font-size:36px; padding-right:2%;" ref={target} onClick={() => setShow(!show)}></i>
+        <Overlay target={target.current} show={show} placement="right">
+          {(props) => (
+            <Tooltip id="overlay-example" {...props}>
+              301-541-9605
+            </Tooltip>
+          )}
+        </Overlay>
+      </>
+    );
+}
+  
 const renderIntro = () =>{
     return(
         <div className="center">
             <h2>
-                Here's how I look from a 10000 feet view
+                Here's me!
             </h2>
             <ul>
-                <li>Motivated: </li>
-                <li>Resilient: Failure doesn't scare me. The bounce back intiates learning and improvement.</li>
-                <li>Active: </li>
-                <li>Maryland-Based: So as one may expect, I love crabs. But I'm all open for relocating!</li>
+                <li>Motivated: I intrinsically seek to learn more and better myself.</li>
+                <li>Resilient: Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
+                <li>Active: I enjoy hiking, exercising, traveling, and listening/playing music.</li>
+                <li>Maryland-based: So as one may expect, I love crabs. But I'm all open for relocating!</li>
                 <li>Corgi-lover: Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
             </ul>
             <h3>Check out my <a href={Resume} target="_blank">resume</a>! If you're interested, feel free to contact me.</h3>
+            <div>
+                <a href="https://github.com/yixinxiao7" target="_blank">
+                    <i class="fa fa-github" Style="font-size:36px; padding-right:2%;"/>
+                </a>
+                <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true" Style="font-size:36px; padding-right:2%;"/>
+                </a>
+                <Example />
+                
+                <a href="mailto:yixinx@umich.edu" target="_blank">
+                    <i class="fa fa-envelope" Style="font-size:36px; padding-right:2%;"/>
+                </a>
+                
+                
+            </div>
         </div>
     );
 }
@@ -36,7 +70,7 @@ const renderEducation = () =>{
             <h3>
                 Degree: Bachelor's (Pursuing)
                 <br/>
-                4rth year student
+                4th year student
                 <br/>
                 Major: Computer Science Engineering
                 <br/>
@@ -45,22 +79,7 @@ const renderEducation = () =>{
         </div>
     );
 }
-const renderDescription = () =>{
-    return(
-        <>
-            {/* <p className = "text-sec p-3">
-                Hey, I'm Yixin! I'm currently studying at the University of Michigan, Ann Arbor, pursuing my Bachelor's degree with a major in Computer Science from the College of Engineering and a minor in Business. I have interests in machine learning, web systems, and financial technology. <br/><br/> 
-                
-                I researched multiple fields of machine learning, include <a href = "#/research" className="db small-modified">deep learning and active learning</a> as a research assistant of the Crowds and Machines Lab of U-M. Prior to this, I developed an augmented reality iOS application for AR related research. 
-                <br/><br/>
-                
-                As a part of the Web Development team of the <i>Michigan Hackers</i>, I am working on the front-end of web application which will help future students better plan our their schedules for upcoming semesters. Most of my work is done in the ReactJS environment. This experience was supplemented with the <i>Web Systems</i> course at U-M where I developed applications such as a search engine and a MapReduce application with React and Python (Flask). Recently as an Software Engineering Intern for <i>Capital One</i>, I worked with Angular and Java (Springboot) to deliver an business facing application focused on promoting business intelligence.
-                <br/><br/>
-                Outside of academics, I enjoy hiking, exercising, listening/playing music, and traveling! 
-            </p> */}
-        </>
-    );
-}
+
 const renderWorkExp=()=>{
     return(
         <VerticalTimeline layout="1-column">
@@ -109,7 +128,7 @@ const renderWorkExp=()=>{
             <h4 className="vertical-timeline-element-subtitle db-text">Project Management / IT Intern</h4>
             <hr className="line-db"></hr>
             <p>
-                During this internship, I had the chance to work both on PM and IT tasks. With the business undergoing a transformative change in its hiring process, I was able to a key role in expediting this by documenting the current process, identifying issues and developing goals to remediate those. These were done through a series of meetings involving the CEO, COO and other project managers, where I also aplied Poka Yoke and other Six Sigma concepts to promote quality assurance for futurue steps.
+                During this internship, I had the chance to work both on PM and IT tasks. With the business undergoing a transformative change in its hiring process, I was able to play a key role in expediting this by documenting the current process, identifying issues and developing goals to remediate those. These were done through a series of meetings involving the CEO, COO and other project managers, where I also aplied Poka Yoke and other Six Sigma concepts to promote quality assurance for future steps.
             </p>
             <p>
                 On the IT side, I used tools such as Javascript and Microsoft Flow to automate and accelerate office workflows, produce more efficient interdepartmental work cycles and further promote QA.
@@ -158,6 +177,82 @@ const renderResearchExp=()=>{
         </VerticalTimeline>
     );
 }
+
+const renderCards=()=>{    
+    return(
+        <Container>
+            <Row Style="padding-top:1%; padding-bottom: 1%;">
+                <Col>
+                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto;">
+                        <Card.Header className="lgreen-colored"/>
+                        <Card.Body className="dgreen-colored">
+                            <Card.Title className="light-green">Best Donut Delivery Route</Card.Title>
+                            <Card.Text className="light-grey">
+                            Graphs, Minimum Spanning Trees, and the Traveling Salesman problem algorithms and heuristics.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="lgreen-colored">
+                        <a href='https://github.com/yixinxiao7/MST-TSP.git' target='_blank'>
+                            <Button variant="outline-light" className="mt-2">See Project</Button>
+                        </a>
+                        </Card.Footer>
+                    </Card>    
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                        <Card.Header className="lgreen-colored"/>
+                        <Card.Body className="dgreen-colored">
+                            <Card.Title className="light-green">Stock Market Simulation as Star Wars</Card.Title>
+                            <Card.Text className="light-grey">
+                                Stacks, Queues, and the Running Median algorithm. Also, the heap implemented 3 different ways: pairing, binary, and sorted.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="lgreen-colored">
+                        <a href="https://github.com/yixinxiao7/Stock-Market-Simulation.git" target='_blank'>
+                            <Button variant="outline-light" className="mt-2">See Project</Button>
+                        </a>
+                        </Card.Footer>
+                    </Card>
+                </Col>
+            </Row>
+            <Row Style="padding-bottom: 1%;">    
+                <Col>
+                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                        <Card.Header className="lgreen-colored"/>
+                        <Card.Body className="dgreen-colored">
+                            <Card.Title className="light-green">Log Manager</Card.Title>
+                            <Card.Text className="light-grey">
+                                Hash tables, vectors, deques, and sorting algorithms!
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="lgreen-colored">
+                        <a href="https://github.com/yixinxiao7/Log-Manager.git" target='_blank'>
+                            <Button variant="outline-light" className="mt-2">See Project</Button>
+                        </a>
+                        </Card.Footer>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                        <Card.Header className="lgreen-colored"/>
+                        <Card.Body className="dgreen-colored">
+                            <Card.Title className="light-green">Puzzle Solver</Card.Title>
+                            <Card.Text className="light-grey">
+                                Depth first search, Breadth first search, and backtracking algorithms!
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="lgreen-colored">
+                        <a href="https://github.com/yixinxiao7/Puzzle-Solver.git" target='_blank'>
+                            <Button variant="outline-light" className="mt-2">See Project</Button>
+                        </a>
+                        </Card.Footer>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
+    );    
+}
+
 export default class AboutMe extends React.Component{
     render(){
         return(
@@ -194,10 +289,16 @@ export default class AboutMe extends React.Component{
                     </h2>            
                     {renderResearchExp()}
                 </Row>
-                <Row>
-                    <h2 className="experience-header">
-                        Projects
-                    </h2>
+                <Row className="dgrey-colored">
+                    <div className="experience-header">
+                        <h2 className="light-green" Style="text-align:center">
+                            Projects
+                        </h2>
+                        <p className="light-grey" Style="text-align:center">
+                            Here's a list of my data structures and algorithm-focused projects! To see a list of all my projects, check out my GitHub page.
+                        </p>
+                    </div>
+                    {renderCards()}
                 </Row>
             </Container>
         );

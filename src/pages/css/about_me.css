@@ -1,3 +1,62 @@
+/* .full-screen{
+    width:100%;
+    height:100%;
+} */
+.container{
+    min-height: 100%;
+    min-width: 100%;
+}
+.intro-row{
+    height:100%;
+}
+.lgreen-colored{
+    background-color: #c0dfd0;
+}
+.dgreen-colored{
+    background-color: #84a9a1;
+}
+.lgrey-colored{
+    background-color: #d3d7db;
+}
+.dgrey-colored{
+    background-color: #9ba6ad;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.michigan-logo{
+    width:50%;
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+.education-text{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right:20%;
+}
+.responsive{
+    vertical-align: bottom;
+    width:100%;
+    height:auto;
+    margin-left:15%;
+}
+.experience-header{
+    padding-top:3%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.span-column{
+    margin-left:auto;
+    margin-right:auto;
+}
+.card{
+    min-height: 230px;
+}
+
 .resize-image{
     width:30%;
     float:left;
