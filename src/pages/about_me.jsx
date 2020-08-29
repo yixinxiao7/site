@@ -11,7 +11,7 @@ import {IoIosPhonePortrait, IoIosMail,IoLogoLinkedin} from "react-icons/io";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 
-function Example() {
+function Phone() {
     const [show, setShow] = React.useState(false);
     const target = React.useRef(null);
   
@@ -31,7 +31,7 @@ function Example() {
   
 const renderIntro = () =>{
     return(
-        <div className="center">
+        <div className="slight-right">
             <h2>
                 Here's me!
             </h2>
@@ -50,8 +50,7 @@ const renderIntro = () =>{
                 <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank">
                     <i class="fa fa-linkedin-square" aria-hidden="true" Style="font-size:36px; padding-right:2%;"/>
                 </a>
-                <Example />
-                
+                <Phone />
                 <a href="mailto:yixinx@umich.edu" target="_blank">
                     <i class="fa fa-envelope" Style="font-size:36px; padding-right:2%;"/>
                 </a>
@@ -256,51 +255,55 @@ const renderCards=()=>{
 export default class AboutMe extends React.Component{
     render(){
         return(
-            <Container className="full-screen">
-                <Row>
-                    <Col>{renderNavBar()}</Col>
-                </Row>
-                {/* <Row>{renderPicture()}</Row> */}
-                <Row className="flex-grow-1">
-                    <Col sm={5}>
-                        <Image src={Me} className="responsive"/>
-                    </Col>
-                    <Col sm={7}>
-                        {renderIntro()}
-                    </Col>
-                </Row>
-                <Row className="lgreen-colored">
-                    <Col xs={5} sm={4}>
-                        <Image src={SchoolLogo} className="michigan-logo center"/>
-                    </Col>
-                    <Col xs={7} sm={8}>
-                        {renderEducation()}
-                    </Col>
-                </Row>
-                <Row className="dgreen-colored">
-                    <h2 className="experience-header light-grey">
-                        Work Experience
-                    </h2>            
-                    {renderWorkExp()}
-                </Row>
-                <Row className="lgrey-colored">
-                    <h2 className="experience-header dark-green">
-                        Research Experience
-                    </h2>            
-                    {renderResearchExp()}
-                </Row>
-                <Row className="dgrey-colored">
-                    <div className="experience-header">
-                        <h2 className="light-green" Style="text-align:center">
-                            Projects
-                        </h2>
-                        <p className="light-grey" Style="text-align:center">
-                            Here's a list of my data structures and algorithm-focused projects! To see a list of all my projects, check out my GitHub page.
-                        </p>
+            <>
+                <Container>
+                    <div Style="z-index:1">
+                        {renderNavBar()}
                     </div>
-                    {renderCards()}
-                </Row>
-            </Container>
+                    {/* <Row>{renderPicture()}</Row> */}
+                    <div Style="z-index:2;">
+                        <div>
+                            <Image src={Me} className="responsive"/>
+                        </div>
+                        <div>
+                            {renderIntro()}
+                        </div>
+                    </div>
+                </Container>
+                <Container>
+                    <Row className="lgreen-colored">
+                        <Col xs={5} sm={4}>
+                            <Image src={SchoolLogo} className="michigan-logo center"/>
+                        </Col>
+                        <Col xs={7} sm={8}>
+                            {renderEducation()}
+                        </Col>
+                    </Row>
+                    <Row className="dgreen-colored">
+                        <h2 className="experience-header light-grey">
+                            Work Experience
+                        </h2>            
+                        {renderWorkExp()}
+                    </Row>
+                    <Row className="lgrey-colored">
+                        <h2 className="experience-header dark-green">
+                            Research Experience
+                        </h2>            
+                        {renderResearchExp()}
+                    </Row>
+                    <Row className="dgrey-colored">
+                        <div className="experience-header">
+                            <h2 className="light-green" Style="text-align:center">
+                                Projects
+                            </h2>
+                            <p className="light-grey" Style="text-align:center">
+                                Here's a list of my data structures and algorithm-focused projects! To see a list of all my projects, check out my GitHub page.
+                            </p>
+                        </div>
+                        {renderCards()}
+                    </Row>
+                </Container>
+            </>
         );
     }
 }
