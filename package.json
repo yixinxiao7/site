@@ -16,6 +16,7 @@
     "react-grid-gallery": "^0.5.5",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^2.0.0",
     "react-scripts": "3.0.1",
     "react-vertical-timeline-component": "^2.4.0",
     "styled-components": "^5.1.1"

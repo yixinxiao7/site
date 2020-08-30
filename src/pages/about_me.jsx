@@ -281,8 +281,7 @@ export default class AboutMe extends React.Component{
                     </div>
                 </Container>
                 <Container>
-                        <Row className="lgreen-colored">
-                            
+                        <Row id="education" className="lgreen-colored">
                                 <Col xs={5} sm={4}>
                                     <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
                                     <Image src={SchoolLogo} className="michigan-logo center"/>
@@ -296,19 +295,19 @@ export default class AboutMe extends React.Component{
                                 </Col>
                             
                     </Row>
-                    <Row className="dgreen-colored">
+                    <Row id="work" className="dgreen-colored">
                         <h2 className="experience-header light-grey">
                             Work Experience
                         </h2>            
                         {renderWorkExp()}
                     </Row>
-                    <Row className="lgrey-colored">
+                    <Row id="research" className="lgrey-colored">
                         <h2 className="experience-header dark-green">
                             Research Experience
                         </h2>            
                         {renderResearchExp()}
                     </Row>
-                    <Row className="dgrey-colored">
+                    <Row id="projects" className="dgrey-colored">
                         <div className="experience-header">
                             <h2 className="light-green" Style="text-align:center">
                                 Projects

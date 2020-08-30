@@ -3,7 +3,6 @@ import {Row, Col, Container, Image, Button,Jumbotron} from 'react-bootstrap';
 import Pic from '../images/YX.jpg';
 import './css/home_page.css'
 import './css/global_comp.css'
-import {renderNavBar} from '../global_component/nav_bar.jsx';
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations'
 
