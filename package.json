@@ -4,15 +4,21 @@
   "private": true,
   "homepage": "https://yixinxiao7.github.io/site",
   "dependencies": {
+    "@react-latest-ui/react-sticky-notes": "^0.2.6",
+    "animate.css": "^4.1.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
     "react-grid-gallery": "^0.5.5",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-vertical-timeline-component": "^2.4.0"
+    "react-vertical-timeline-component": "^2.4.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",

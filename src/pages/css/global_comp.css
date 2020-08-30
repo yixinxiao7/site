@@ -43,3 +43,7 @@
     border-color: #84a9a1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+

@@ -6,11 +6,17 @@ import './css/about_me.css';
 import './css/global_comp.css';
 import Resume from '../resume/Resume.pdf';
 import {renderNavBar} from '../global_component/nav_bar.jsx';
-import {FaGlasses, FaRobot} from "react-icons/fa";
-import {IoIosPhonePortrait, IoIosMail,IoLogoLinkedin} from "react-icons/io";
+import styled, { keyframes } from 'styled-components';
+import { fadeIn } from 'react-animations'
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
+const fadeInAnimation = keyframes`${fadeIn}`;
 
+const FadeInDiv = styled.div`
+  animation: 2s ${fadeInAnimation};
+`;
 function Phone() {
     const [show, setShow] = React.useState(false);
     const target = React.useRef(null);
@@ -31,33 +37,33 @@ function Phone() {
   
 const renderIntro = () =>{
     return(
-        <div className="slight-right">
-            <h2>
-                Here's <span className="dark-green">me</span>!
-            </h2>
-            <ul>
-                <li>Motivated: I intrinsically seek to learn more and better myself.</li>
-                <li>Resilient: Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
-                <li>Active: I enjoy hiking, exercising, traveling, and listening/playing music.</li>
-                <li>Maryland-based: So as one may expect, I love crabs. But I'm all open for relocating!</li>
-                <li>Corgi-lover: Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
-            </ul>
-            <h3>Check out my <a href={Resume} target="_blank" className="link-color">resume</a>! If you're interested, feel free to contact me.</h3>
-            <div>
-                <a href="https://github.com/yixinxiao7" target="_blank" className="link-color">
-                    <i class="fa fa-github" Style="font-size:36px; padding-right:2%;"/>
-                </a>
-                <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank" className="link-color">
-                    <i class="fa fa-linkedin-square" aria-hidden="true" Style="font-size:36px; padding-right:2%;"/>
-                </a>
-                <Phone />
-                <a href="mailto:yixinx@umich.edu" target="_blank" className="link-color">
-                    <i class="fa fa-envelope" Style="font-size:36px; padding-right:2%;"/>
-                </a>
-                
-                
+            <div className="slight-right">
+                <h2>
+                    Here's <span className="dark-green">me!</span>
+                </h2>
+                <ul>
+                    <li>Motivated: I intrinsically seek to learn more and better myself.</li>
+                    <li>Resilient: Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
+                    <li>Active: I enjoy hiking, exercising, traveling, and listening/playing music.</li>
+                    <li>Maryland-based: So as one may expect, I love crabs. But I'm all open for relocating!</li>
+                    <li>Corgi-lover: Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
+                </ul>
+                <h3>Check out my <a href={Resume} target="_blank" className="link-color">resume!</a> If you're interested, feel free to contact me.</h3>
+                <div>
+                    <a href="https://github.com/yixinxiao7" target="_blank" className="link-color">
+                        <i class="fa fa-github" Style="font-size:36px; padding-right:2%;"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank" className="link-color">
+                        <i class="fa fa-linkedin-square" aria-hidden="true" Style="font-size:36px; padding-right:2%;"/>
+                    </a>
+                    <Phone />
+                    <a href="mailto:yixinx@umich.edu" target="_blank" className="link-color">
+                        <i class="fa fa-envelope" Style="font-size:36px; padding-right:2%;"/>
+                    </a>
+                    
+                    
+                </div>
             </div>
-        </div>
     );
 }
 const renderEducation = () =>{
@@ -178,70 +184,78 @@ const renderCards=()=>{
         <Container>
             <Row Style="padding-top:1%; padding-bottom: 1%;">
                 <Col>
-                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto;">
-                        <Card.Header className="lgreen-colored"/>
-                        <Card.Body className="dgreen-colored">
-                            <Card.Title className="light-green">Best Donut Delivery Route</Card.Title>
-                            <Card.Text className="light-grey">
-                            Graphs, Minimum Spanning Trees, and the Traveling Salesman problem algorithms and heuristics.
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer className="lgreen-colored">
-                        <a href='https://github.com/yixinxiao7/MST-TSP.git' target='_blank'>
-                            <Button variant="outline-light" className="mt-2">See Project</Button>
-                        </a>
-                        </Card.Footer>
-                    </Card>    
+                    <ScrollAnimation animateIn="animate__bounceInLeft" animateOnce={true}>
+                        <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto;">
+                            <Card.Header className="lgreen-colored"/>
+                            <Card.Body className="dgreen-colored">
+                                <Card.Title className="light-green">Best Donut Delivery Route</Card.Title>
+                                <Card.Text className="light-grey">
+                                Graphs, Minimum Spanning Trees, and the Traveling Salesman problem algorithms and heuristics.
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer className="lgreen-colored">
+                            <a href='https://github.com/yixinxiao7/MST-TSP.git' target='_blank'>
+                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            </a>
+                            </Card.Footer>
+                        </Card>    
+                    </ScrollAnimation>
                 </Col>
                 <Col>
-                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
-                        <Card.Header className="lgreen-colored"/>
-                        <Card.Body className="dgreen-colored">
-                            <Card.Title className="light-green">Stock Market Simulation as Star Wars</Card.Title>
-                            <Card.Text className="light-grey">
-                                Stacks, Queues, and the Running Median algorithm. Also, the heap implemented 3 different ways: pairing, binary, and sorted.
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer className="lgreen-colored">
-                        <a href="https://github.com/yixinxiao7/Stock-Market-Simulation.git" target='_blank'>
-                            <Button variant="outline-light" className="mt-2">See Project</Button>
-                        </a>
-                        </Card.Footer>
-                    </Card>
+                    <ScrollAnimation animateIn="animate__bounceInRight" animateOnce={true}>
+                        <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                            <Card.Header className="lgreen-colored"/>
+                            <Card.Body className="dgreen-colored">
+                                <Card.Title className="light-green">Stock Market Simulation as Star Wars</Card.Title>
+                                <Card.Text className="light-grey">
+                                    Stacks, Queues, and the Running Median algorithm. Also, the heap implemented 3 different ways: pairing, binary, and sorted.
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer className="lgreen-colored">
+                            <a href="https://github.com/yixinxiao7/Stock-Market-Simulation.git" target='_blank'>
+                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            </a>
+                            </Card.Footer>
+                        </Card>
+                    </ScrollAnimation>
                 </Col>
             </Row>
             <Row Style="padding-bottom: 1%;">    
                 <Col>
-                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
-                        <Card.Header className="lgreen-colored"/>
-                        <Card.Body className="dgreen-colored">
-                            <Card.Title className="light-green">Log Manager</Card.Title>
-                            <Card.Text className="light-grey">
-                                Hash tables, vectors, deques, and sorting algorithms!
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer className="lgreen-colored">
-                        <a href="https://github.com/yixinxiao7/Log-Manager.git" target='_blank'>
-                            <Button variant="outline-light" className="mt-2">See Project</Button>
-                        </a>
-                        </Card.Footer>
-                    </Card>
+                    <ScrollAnimation animateIn="animate__bounceInLeft" animateOnce={true}>
+                        <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                            <Card.Header className="lgreen-colored"/>
+                            <Card.Body className="dgreen-colored">
+                                <Card.Title className="light-green">Log Manager</Card.Title>
+                                <Card.Text className="light-grey">
+                                    Hash tables, vectors, deques, and sorting algorithms!
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer className="lgreen-colored">
+                            <a href="https://github.com/yixinxiao7/Log-Manager.git" target='_blank'>
+                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            </a>
+                            </Card.Footer>
+                        </Card>
+                    </ScrollAnimation>
                 </Col>
                 <Col>
-                    <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
-                        <Card.Header className="lgreen-colored"/>
-                        <Card.Body className="dgreen-colored">
-                            <Card.Title className="light-green">Puzzle Solver</Card.Title>
-                            <Card.Text className="light-grey">
-                                Depth first search, Breadth first search, and backtracking algorithms!
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer className="lgreen-colored">
-                        <a href="https://github.com/yixinxiao7/Puzzle-Solver.git" target='_blank'>
-                            <Button variant="outline-light" className="mt-2">See Project</Button>
-                        </a>
-                        </Card.Footer>
-                    </Card>
+                    <ScrollAnimation animateIn="animate__bounceInRight" animateOnce={true}>
+                        <Card style={{ width: '18rem' }} Style="margin-left:auto; margin-right:auto">
+                            <Card.Header className="lgreen-colored"/>
+                            <Card.Body className="dgreen-colored">
+                                <Card.Title className="light-green">Puzzle Solver</Card.Title>
+                                <Card.Text className="light-grey">
+                                    Depth first search, Breadth first search, and backtracking algorithms!
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer className="lgreen-colored">
+                            <a href="https://github.com/yixinxiao7/Puzzle-Solver.git" target='_blank'>
+                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            </a>
+                            </Card.Footer>
+                        </Card>
+                    </ScrollAnimation>
                 </Col>
             </Row>
         </Container>
@@ -261,19 +275,26 @@ export default class AboutMe extends React.Component{
                         <div>
                             <Image src={Me} className="responsive"/>
                         </div>
-                        <div>
+                        <FadeInDiv>
                             {renderIntro()}
-                        </div>
+                        </FadeInDiv>
                     </div>
                 </Container>
                 <Container>
-                    <Row className="lgreen-colored">
-                        <Col xs={5} sm={4}>
-                            <Image src={SchoolLogo} className="michigan-logo center"/>
-                        </Col>
-                        <Col xs={7} sm={8}>
-                            {renderEducation()}
-                        </Col>
+                        <Row className="lgreen-colored">
+                            
+                                <Col xs={5} sm={4}>
+                                    <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+                                    <Image src={SchoolLogo} className="michigan-logo center"/>
+                                    </ScrollAnimation>
+                                </Col>
+                                <Col xs={7} sm={8}>
+                                <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce={true}>
+                                        {renderEducation()}
+                                </ScrollAnimation>
+                                    
+                                </Col>
+                            
                     </Row>
                     <Row className="dgreen-colored">
                         <h2 className="experience-header light-grey">
