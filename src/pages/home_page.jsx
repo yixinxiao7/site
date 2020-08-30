@@ -21,12 +21,12 @@ const renderJumbotron = () =>{
                     <h1 className="large-font">
                         Hello, I'm <span className="light-green">Yixin</span>!
                     </h1>   
-                    <h3>
+                    <h2>
                         I'm a passionate <span className="dark-green">student</span>
                         , driven <span className="dark-green">software engineer</span>
                         , and avid <span className="dark-green"> corgi-lover</span>.
-                        </h3>
-                    <Button variant="outline-light" href="#/aboutMe" className="mt-2">More about me</Button>
+                    </h2>
+                    <Button variant="outline-light" href="#/aboutMe" className="mt-2 btn-lg">More about me</Button>
                 </div>
             </Jumbotron>
         </FadeInDiv>

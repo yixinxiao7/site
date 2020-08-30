@@ -10,6 +10,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import { HashLink } from 'react-router-hash-link';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -23,7 +24,7 @@ function Phone() {
   
     return (
       <>
-      <i class="fa fa-phone" Style="font-size:36px; padding-right:2%; color:#c0dfd0" ref={target} onClick={() => setShow(!show)}></i>
+      <i class="fa fa-phone" Style="padding-right:2%; color:#c0dfd0" ref={target} onClick={() => setShow(!show)}></i>
         <Overlay target={target.current} show={show} placement="right">
           {(props) => (
             <Tooltip id="overlay-example" {...props}>
@@ -38,27 +39,26 @@ function Phone() {
 const renderIntro = () =>{
     return(
             <div className="slight-right">
-                <h2>
-                    Here's <span className="dark-green">me!</span>
-                </h2>
-                <ul>
-                    <li>Motivated: I intrinsically seek to learn more and better myself.</li>
-                    <li>Resilient: Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
-                    <li>Active: I enjoy hiking, exercising, traveling, and listening/playing music.</li>
-                    <li>Maryland-based: So as one may expect, I love crabs. But I'm all open for relocating!</li>
-                    <li>Corgi-lover: Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
+                <h1 className="large-size">
+                    Here's <span Style="color:white">me!</span>
+                </h1>
+                <ul className="medium-size">
+                    <li><span className="dark-green">Motivated:</span> I intrinsically seek to learn more and better myself.</li>
+                    <li><span className="dark-green">Resilient:</span> Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
+                    <li><span className="dark-green">Active:</span> I enjoy hiking, exercising, traveling, and listening/playing music.</li>
+                    <li><span className="dark-green">Corgi-lover:</span> Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
                 </ul>
-                <h3>Check out my <a href={Resume} target="_blank" className="link-color">resume!</a> If you're interested, feel free to contact me.</h3>
-                <div>
+                <h3 className="medium-size">Check out my <a href={Resume} target="_blank" className="link-color">resume!</a> If you're interested, feel free to contact me.</h3>
+                <div className="small-icon-size">
                     <a href="https://github.com/yixinxiao7" target="_blank" className="link-color">
-                        <i class="fa fa-github" Style="font-size:36px; padding-right:2%;"/>
+                        <i class="fa fa-github" Style="padding-right:2%;"/>
                     </a>
                     <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank" className="link-color">
-                        <i class="fa fa-linkedin-square" aria-hidden="true" Style="font-size:36px; padding-right:2%;"/>
+                        <i class="fa fa-linkedin-square" aria-hidden="true" Style="padding-right:2%;"/>
                     </a>
                     <Phone />
                     <a href="mailto:yixinx@umich.edu" target="_blank" className="link-color">
-                        <i class="fa fa-envelope" Style="font-size:36px; padding-right:2%;"/>
+                        <i class="fa fa-envelope" Style="padding-right:2%;"/>
                     </a>
                     
                     
@@ -69,7 +69,7 @@ const renderIntro = () =>{
 const renderEducation = () =>{
     return(
         <div align="center" className="education-text">
-            <h2 Style="color:#FBEC5D;"> 
+            <h2 Style="color:#00274C; border-top: solid; border-bottom:solid; border-color:#f2c649"> 
                 University of Michigan
             </h2>
             <h3>
@@ -118,7 +118,7 @@ const renderWorkExp=()=>{
                 At ARA, I worked on refactoring a legacy simulation program with over 100,000 LOC and 25 years of development. This was an interesting challenge as the interdiscliplinary project involved both software and scientific concepts and practices.
             </p>
             <p className="bg-grey">
-                Throughout the summer I worked on merging two separate code databases, and constructing a <a href="https://en.wikipedia.org/wiki/Dynamic-link_library" target="_blank">Dynamic-Link Library</a> that would allow different driver programs to use specific components of functions. Using Fortran (yes, Fortran), I developed my first API that maintained the functionality of the existing GUI for the program and allowed users to run simulations with unique parameters. To make data manipulation/interaction easier on users, I revamped the I/O system such that data would be stored in memory rather than outputted to text files, allowing users to retrieve data in-program directly after a simulation run.
+                Throughout the summer I worked on merging two separate code databases, and constructing a <a href="https://en.wikipedia.org/wiki/Dynamic-link_library" target="_blank" Style="color:#9ba6ad">Dynamic-Link Library</a> that would allow different driver programs to use specific components of functions. Using Fortran (yes, Fortran), I developed my first API that maintained the functionality of the existing GUI for the program and allowed users to run simulations with unique parameters. To make data manipulation/interaction easier on users, I revamped the I/O system such that data would be stored in memory rather than outputted to text files, allowing users to retrieve data in-program directly after a simulation run.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -153,7 +153,7 @@ const renderResearchExp=()=>{
             <p className="bg-grey">
             From 2018-2019, my research centered around machine learning with a focus on active learning and deep learning. The focus of my project was to make a meta learner to select the best active leaning strategy to train a machine learning model depending on its training stage, in order to achieve a fast-learning and accurate model. 
             </p>
-            <p className="bg-gre">
+            <p className="bg-grey">
             I developed a flexible wrapper class for both custom and Pytorch convolution neural networks, with an API similar to that found on scikit-learn models. This wrapper class was used to develop the experimental pipeline, building part of the foundation of the research project.
             </p>
             <p className="bg-grey">
@@ -194,8 +194,8 @@ const renderCards=()=>{
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer className="lgreen-colored">
-                            <a href='https://github.com/yixinxiao7/MST-TSP.git' target='_blank'>
-                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            <a href="https://github.com/yixinxiao7/MST-TSP.git" target="_blank" Style="color:black">
+                                <i class="fa fa-github" Style="font-size:30px; padding-right:2%;"/>
                             </a>
                             </Card.Footer>
                         </Card>    
@@ -212,8 +212,8 @@ const renderCards=()=>{
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer className="lgreen-colored">
-                            <a href="https://github.com/yixinxiao7/Stock-Market-Simulation.git" target='_blank'>
-                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            <a href="https://github.com/yixinxiao7/Stock-Market-Simulation.git" target="_blank" Style="color:black">
+                                <i class="fa fa-github" Style="font-size:30px; padding-right:2%;"/>
                             </a>
                             </Card.Footer>
                         </Card>
@@ -232,8 +232,8 @@ const renderCards=()=>{
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer className="lgreen-colored">
-                            <a href="https://github.com/yixinxiao7/Log-Manager.git" target='_blank'>
-                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            <a href="https://github.com/yixinxiao7/Log-Manager.git" target="_blank" Style="color:black">
+                                <i class="fa fa-github" Style="font-size:30px; padding-right:2%;"/>
                             </a>
                             </Card.Footer>
                         </Card>
@@ -250,8 +250,8 @@ const renderCards=()=>{
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer className="lgreen-colored">
-                            <a href="https://github.com/yixinxiao7/Puzzle-Solver.git" target='_blank'>
-                                <Button variant="outline-light" className="mt-2">See Project</Button>
+                            <a href="https://github.com/yixinxiao7/Puzzle-Solver.git" target="_blank" Style="color:black">
+                                <i class="fa fa-github" Style="font-size:30px; padding-right:2%;"/>
                             </a>
                             </Card.Footer>
                         </Card>
@@ -279,21 +279,17 @@ export default class AboutMe extends React.Component{
                             {renderIntro()}
                         </FadeInDiv>
                     </div>
+                    
+                    <HashLink smooth to="/aboutMe#education" className="down-arrow light-green"> <i className="fa fa-angle-down"/></HashLink>
+                
                 </Container>
                 <Container>
-                        <Row id="education" className="lgreen-colored">
-                                <Col xs={5} sm={4}>
-                                    <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
-                                    <Image src={SchoolLogo} className="michigan-logo center"/>
-                                    </ScrollAnimation>
-                                </Col>
-                                <Col xs={7} sm={8}>
-                                <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce={true}>
-                                        {renderEducation()}
-                                </ScrollAnimation>
-                                    
-                                </Col>
-                            
+                    <Row id="education" className="lgreen-colored">
+                        <Col>
+                            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce={true}>
+                                {renderEducation()}
+                            </ScrollAnimation>
+                        </Col>
                     </Row>
                     <Row id="work" className="dgreen-colored">
                         <h2 className="experience-header light-grey">
@@ -313,7 +309,7 @@ export default class AboutMe extends React.Component{
                                 Projects
                             </h2>
                             <p className="light-grey" Style="text-align:center">
-                                Here's a list of my data structures and algorithm-focused projects! To see a list of all my projects, check out my GitHub page.
+                                Here's a list of my data structures and algorithm-focused projects! To see a list of all my projects, check out my <a href="https://github.com/yixinxiao7" target="_blank" className="link-color">GitHub</a> page.
                             </p>
                         </div>
                         {renderCards()}

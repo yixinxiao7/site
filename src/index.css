@@ -1,12 +1,19 @@
 body {
   margin: 0;
   background-color: #6b6369;
-  font-family: 'Alata', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:hover {
+  color: #84a9a1;
+}
+
+i:hover {
+  color: #9ba6ad;
+}
 
 html, body, #app, #app>div {
   height: 100%
@@ -17,6 +24,6 @@ html, body, #app, #app>div {
 }
 
 code {
-  font-family: 'Alata', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 

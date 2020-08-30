@@ -1,3 +1,24 @@
+/* @media screen and (max-width : 1500px)
+{
+    .medium-size{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width : 1200px)
+{
+    .medium-size{
+        font-size: 20px;
+    }
+} */
+.large-size{
+    font-size: 2.5vw;
+}
+.medium-size{
+    font-size: 1.3vw;
+}
+.small-icon-size{
+    font-size: 1.8vw;
+}
 .link-color{
     color: #c0dfd0;
 }
@@ -42,7 +63,9 @@
 .education-text{
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-right:20%;
+    position: relative;
+    height: auto;
+    margin: 0 auto;
 }
 .responsive{
     position:absolute; 
@@ -63,7 +86,12 @@
 .card{
     min-height: 230px;
 }
-
+.down-arrow{
+    position: absolute;
+    font-size:36px; 
+    right:40%;
+    bottom:0;
+}
 .resize-image{
     width:30%;
     float:left;
@@ -92,10 +120,7 @@
     text-align:center;
     display:inline-block;
 }
-.db{
-   
-    font-size:23px;
-}
+
 .ital{
     font-style:italic;
 }
