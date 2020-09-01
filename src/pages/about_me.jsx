@@ -1,7 +1,6 @@
 import React from 'react';
-import {Button, Row, Col, Container, Image, Card, Overlay, Tooltip} from 'react-bootstrap';
-import SchoolLogo from '../images/m.png';
-import Me from '../images/2.png';
+import {Row, Col, Container, Image, Card, Overlay, Tooltip} from 'react-bootstrap';
+import Me from '../images/ME.png';
 import './css/about_me.css';
 import './css/global_comp.css';
 import Resume from '../resume/Resume.pdf';
@@ -13,6 +12,7 @@ import "animate.css/animate.min.css";
 import { HashLink } from 'react-router-hash-link';
 import {NavLink, Link} from 'react-router-dom';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 

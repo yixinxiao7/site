@@ -1,6 +1,5 @@
 import React from 'react';
-import {Row, Col, Container, Image, Button,Jumbotron} from 'react-bootstrap';
-import Pic from '../images/YX.jpg';
+import {Container, Button,Jumbotron} from 'react-bootstrap';
 import './css/home_page.css'
 import './css/global_comp.css'
 import styled, { keyframes } from 'styled-components';
