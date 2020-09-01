@@ -1,31 +1,7 @@
-/* @media screen and (max-width : 1500px)
-{
-    .medium-size{
-        font-size: 30px;
-    }
-}
-@media screen and (max-width : 1200px)
-{
-    .medium-size{
-        font-size: 20px;
-    }
-} */
-.large-size{
-    font-size: 2.5vw;
-}
-.medium-size{
-    font-size: 1.3vw;
-}
-.small-icon-size{
-    font-size: 1.8vw;
-}
 .link-color{
     color: #c0dfd0;
 }
-.container{
-    min-height: 100%;
-    min-width: 100%;
-}
+
 .intro-row{
     height:100%;
 }
@@ -40,13 +16,6 @@
 }
 .dgrey-colored{
     background-color: #9ba6ad;
-}
-.slight-right{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -40%;
-    transform: translate(-20%, -70%)
 }
 .center{
     position: absolute;
@@ -67,13 +36,7 @@
     height: auto;
     margin: 0 auto;
 }
-.responsive{
-    position:absolute; 
-    bottom:0;
-    /* vertical-align: bottom; */
-    width:60%;
-    height:auto;
-}
+
 .experience-header{
     padding-top:3%;
     margin-left:auto;

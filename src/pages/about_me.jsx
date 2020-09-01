@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Row, Col, Container, Image, Card, Overlay, Tooltip} from 'react-bootstrap';
 import SchoolLogo from '../images/m.png';
-import Me from '../images/final_me.png';
+import Me from '../images/2.png';
 import './css/about_me.css';
 import './css/global_comp.css';
 import Resume from '../resume/Resume.pdf';
@@ -11,6 +11,7 @@ import { fadeIn } from 'react-animations'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 import { HashLink } from 'react-router-hash-link';
+import {NavLink, Link} from 'react-router-dom';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -42,22 +43,22 @@ const renderIntro = () =>{
                 <h1 className="large-size">
                     Here's <span Style="color:white">me!</span>
                 </h1>
-                <ul className="medium-size">
+                <ul className="medium-size pr-3">
                     <li><span className="dark-green">Motivated:</span> I intrinsically seek to learn more and better myself.</li>
                     <li><span className="dark-green">Resilient:</span> Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
                     <li><span className="dark-green">Active:</span> I enjoy hiking, exercising, traveling, and listening/playing music.</li>
                     <li><span className="dark-green">Corgi-lover:</span> Don't get me wrong. I love almost all animals. But corgis are EXTRA cute.</li>
                 </ul>
-                <h3 className="medium-size">Check out my <a href={Resume} target="_blank" className="link-color">resume!</a> If you're interested, feel free to contact me.</h3>
+                <h3 className="medium-size">Check out my <a href={Resume} target="_blank" className="link-color medium-size">resume!</a> If you're interested, feel free to contact me.</h3>
                 <div className="small-icon-size">
-                    <a href="https://github.com/yixinxiao7" target="_blank" className="link-color">
+                    <a href="https://github.com/yixinxiao7" target="_blank" className="link-color small-icon-size">
                         <i class="fa fa-github" Style="padding-right:2%;"/>
                     </a>
-                    <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank" className="link-color">
+                    <a href="https://www.linkedin.com/in/yixin-xiao-4851a2163/" target="_blank" className="link-color small-icon-size">
                         <i class="fa fa-linkedin-square" aria-hidden="true" Style="padding-right:2%;"/>
                     </a>
                     <Phone />
-                    <a href="mailto:yixinx@umich.edu" target="_blank" className="link-color">
+                    <a href="mailto:yixinx@umich.edu" target="_blank" className="link-color small-icon-size">
                         <i class="fa fa-envelope" Style="padding-right:2%;"/>
                     </a>
                     
@@ -69,8 +70,8 @@ const renderIntro = () =>{
 const renderEducation = () =>{
     return(
         <div align="center" className="education-text">
-            <h2 Style="color:#00274C; border-top: solid; border-bottom:solid; border-color:#f2c649"> 
-                University of Michigan
+            <h2 Style="color:#00274C; border-top: solid; border-bottom:solid; border-color:#f2c649;"> 
+                <b>University of Michigan</b>
             </h2>
             <h3>
                 Degree: Bachelor's (Pursuing)
@@ -141,7 +142,7 @@ const renderWorkExp=()=>{
 }
 const renderResearchExp=()=>{
     return(
-        <VerticalTimeline layout="1-column">
+        <VerticalTimeline layout="1-column" className="pr-auto">
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="September 2018 - February 2020"
@@ -267,19 +268,20 @@ export default class AboutMe extends React.Component{
         return(
             <>
                 <Container>
-                    <div Style="z-index:1">
+                    <Row className="render-navbar">
                         {renderNavBar()}
-                    </div>
-                    {/* <Row>{renderPicture()}</Row> */}
-                    <div Style="z-index:2;">
+                    </Row>
+                    <Row className="render-sub-navbar ml-1">
+                        <NavLink tag={Link} to="/"><h1 className="light-green sub-navbar-size pt-3 mx-3">Yixin Xiao</h1></NavLink>
+                    </Row>
+                    <Row>
                         <div>
                             <Image src={Me} className="responsive"/>
                         </div>
                         <FadeInDiv>
                             {renderIntro()}
                         </FadeInDiv>
-                    </div>
-                    
+                    </Row>
                     <HashLink smooth to="/aboutMe#education" className="down-arrow light-green"> <i className="fa fa-angle-down"/></HashLink>
                 
                 </Container>

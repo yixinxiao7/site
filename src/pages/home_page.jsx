@@ -17,7 +17,7 @@ const renderJumbotron = () =>{
     return(
         <FadeInDiv>
             <Jumbotron align="center" className = "bg-trans">
-                <div className="vcenter">
+                <div className="vcenter px-3">
                     <h1 className="large-font">
                         Hello, I'm <span className="light-green">Yixin</span>!
                     </h1>   
