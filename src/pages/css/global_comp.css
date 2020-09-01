@@ -77,16 +77,13 @@ html {
         height:auto;
     }
     .large-size{
-        font-size: 8.0vw;
+        font-size: 6.0vw;
     }
     .medium-size{
-        font-size: 3.0vw;
-    }
-    .a{
-        font-size: 3.0vw;
+        font-size: 2.5vw;
     }
     .small-icon-size{
-        font-size: 7.0vw;
+        font-size: 6.5vw;
     }
     .slight-right{
         position: absolute;
