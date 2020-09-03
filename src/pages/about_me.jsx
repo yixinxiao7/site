@@ -47,7 +47,7 @@ const renderIntro = () =>{
                     <li><span className="dark-green">Motivated:</span> I intrinsically seek to learn more and better myself.</li>
                     <li><span className="dark-green">Resilient:</span> Failure doesn't scare me. The bounce back initiates learning and improvement.</li>
                     <li><span className="dark-green">Active:</span> I enjoy hiking, exercising, traveling, and listening/playing music.</li>
-                    <li><span className="dark-green">Animal-lover:</span> However, I do have a soft spot for corgis.</li>
+                    <li><span className="dark-green">Animal-lover:</span> I do have a soft spot for corgis though.</li>
                 </ul>
                 <h3 className="medium-size">Check out my <a href={Resume} target="_blank" className="link-color medium-size">resume!</a> If you're interested, feel free to contact me.</h3>
                 <div className="small-icon-size">
