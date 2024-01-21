@@ -1,18 +1,12 @@
 import styles from '../page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { IoMdArrowDropleftCircle } from "react-icons/io";
+import Header from '@/components/header'
 
 export default function AboutMe() {
     return(
         <main className={styles.main}>
-            <div className={styles.description}>
-                <Link 
-                    href="/"
-                    className={styles.card}>
-                <IoMdArrowDropleftCircle size={20}/>
-                </Link>
-            </div>
+            <Header/>
             <div className={styles.grid}>
                 <Image
                     src={`/me.jpeg`}

@@ -4,11 +4,9 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-      </div>
-
+      <div/>
       <div className={styles.center}>
-        <h1>Hi, I'm <b className={styles.yellow}>Yixin</b>!</h1>
+        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.yellow} style={{fontSize: '8rem'}}>Yixin</b>!</h1>
       </div>
 
       <div className={styles.grid}>
@@ -26,7 +24,7 @@ export default function Home() {
           className={styles.card}
         >
           <h2>
-            What I've done
+            What I've done!
           </h2>
         </Link>
       </div>

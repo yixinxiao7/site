@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
+  padding-top: 1rem;
   min-height: 100vh;
 }
 
@@ -70,6 +71,20 @@
   width: var(--max-width);
   justify-content: center;
 
+}
+
+.header {
+  display: flex;
+  margin-top: 0;
+}
+
+.header a:hover {
+  text-decoration: underline dotted;
+}
+
+.header div {
+  display: flex;
+  padding: 2.5rem;
 }
 
 .card {
