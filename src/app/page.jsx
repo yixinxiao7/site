@@ -20,7 +20,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/about_me"
+          href="/education"
           className={styles.card}
         >
           <h2>
