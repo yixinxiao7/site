@@ -2,6 +2,9 @@ import styles from '../page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/header'
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function AboutMe() {
     return(
@@ -28,6 +31,27 @@ export default function AboutMe() {
                         If you catch me outside the office, I'll most likely be looking for the next plant to join
                         my humble plant family, weight-lifting or boxing, or wondering the city to dine at the 
                         next mouth-watering restaurant. 
+                        <br/><br/>
+                        Want to connect? I'm reachable at any of the places below!
+                        <br/><br/>
+                        <a
+                            href='mailto:yixinxiao7@gmail.com'
+                            target="_blank"
+                            rel="noopener noreferrer">
+                        <MdEmail size={50} className={styles.icon}/>
+                        </a>
+                        <a
+                            href='https://www.linkedin.com/in/yixin-xiao'
+                            target="_blank"
+                            rel="noopener noreferrer">
+                        <FaLinkedin size={50} className={styles.icon}/>
+                        </a>
+                        <a 
+                            href='https://github.com/yixinxiao7'
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <FaGithub size={50} className={styles.icon}/>
+                        </a>
                     </h>
                 </div>
             </div>

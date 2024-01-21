@@ -45,6 +45,14 @@
   font-family: var(--font-mono);
 }
 
+.icon {
+  padding: .5rem;
+}
+
+.icon:hover {
+  color:#ecbf1c;
+}
+
 .grid {
   display: flex;
   /* grid-template-columns: repeat(4, minmax(25%, auto)); */
