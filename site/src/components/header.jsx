@@ -28,8 +28,13 @@ export default function Header() {
                 </a>
             </div>
             <div>
+                <a href='/education' id='education'>
+                    <h3>My Education</h3>
+                </a>
+            </div>
+            <div>
                 <a href='/experience' id='experience'>
-                    <h3>What I've done!</h3>
+                    <h3>What I've done</h3>
                 </a>
             </div>
        </div>

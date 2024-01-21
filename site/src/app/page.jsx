@@ -20,11 +20,20 @@ export default function Home() {
         </Link>
 
         <Link
+          href="/about_me"
+          className={styles.card}
+        >
+          <h2>
+            My Education
+          </h2>
+        </Link>
+
+        <Link
           href="/experience"
           className={styles.card}
         >
           <h2>
-            What I've done!
+            What I've done
           </h2>
         </Link>
       </div>

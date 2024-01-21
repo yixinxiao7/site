@@ -55,9 +55,7 @@ export default function AboutMe() {
                     </h>
                 </div>
             </div>
-            <div className={styles.center}>
-                
-            </div>
+            <div/>
         </main>
     )
 }
