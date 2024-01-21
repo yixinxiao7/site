@@ -16,19 +16,15 @@ export default function Experience() {
                     </h1>
                 </div>
             </div>
-            <div className={styles.center}>
-                <div className={styles.description}
-                style={{paddingBottom: '80%'}}>
-                    <p>
-                        <a
-                            href="/Resume_2024.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Take a look!
-                        </a>
-                    </p>
-                    
-                </div>
+            <div className={styles.center_new}>
+                <p>
+                    <a
+                        href="/Resume_2024.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Take a look!
+                    </a>
+                </p>
             </div>
         </main>
     )
