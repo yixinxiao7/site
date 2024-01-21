@@ -24,9 +24,9 @@ export default function AboutMe() {
                         at Capital One currently. 
                         <br/><br/>
                         I'm passionate in full-stack engineering, data/AI science as well as misinformation management. 
-                        While at school, I was heavily involved with Tau Beta Pi (Engineer honor society)
-                        as well as Michigan Hackers. My involvement in these student orgs along with my career experiences
-                        has profoundly shaped said passions.
+                        While at school, I was heavily involved with Tau Beta Pi (Engineering honor society)
+                        as well as Michigan Hackers. My time in these student orgs along with my career experiences
+                        have profoundly shaped said passions.
                         <br/><br/>
                         If you catch me outside the office, I'll most likely be looking for the next plant to join
                         my humble plant family, weight-lifting or boxing, or wondering the city to dine at the 
