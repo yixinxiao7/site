@@ -27,7 +27,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  /* font-family:'_Inter_e66fe9'; */
   padding: 20px;
 }
 
@@ -85,6 +84,14 @@
 .header div {
   display: flex;
   padding: 2.5rem;
+}
+
+.row {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .card {
@@ -169,6 +176,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    padding: 3rem;
+    padding-top: 1rem;
+  }
   .content {
     padding: 4rem;
   }
@@ -178,6 +189,15 @@
     margin-bottom: 120px;
     max-width: 320px;
     text-align: center;
+  }
+
+  .row {
+    display:block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0%;
+    padding-right: 0%;
   }
 
   .card {

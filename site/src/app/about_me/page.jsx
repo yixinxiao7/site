@@ -7,25 +7,26 @@ export default function AboutMe() {
     return(
         <main className={styles.main}>
             <Header/>
-            <div className={styles.grid}>
+            <div className={styles.row}>
                 <Image
                     src={`/me.jpeg`}
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ width: '50%', height: 'auto', borderRadius: '30px'}}
+                    style={{ width: '30%', height: 'auto', borderRadius: '30px'}}
                 />
                 <div className={styles.description_new}>
                     <h>
                         My name is <b className={styles.yellow}>Yixin Xiao</b> (ee-shin sh-ow). I'm a senior software engineer based in New York City, working 
                         at Capital One currently. 
                         <br/><br/>
-                        I graduated from University of Michigan - Ann Arbor in 2021 with a BSE in Computer Science 
-                        Engineering. While at school, I was heavily involved with Tau Beta Pi (Engineer honor society),
-                        as well as Michigan Hackers.
+                        I'm passionate in full-stack engineering, data/AI science as well as misinformation management. 
+                        While at school, I was heavily involved with Tau Beta Pi (Engineer honor society)
+                        as well as Michigan Hackers. My involvement in these student orgs along with my career experiences
+                        has profoundly shaped said passions.
                         <br/><br/>
-                        If you catch me outside the office, I'll most likely be looking for the next plant to
-                        my humble plant family, at the gym weight-lifting or boxing, or wondering the city to dine at the 
+                        If you catch me outside the office, I'll most likely be looking for the next plant to join
+                        my humble plant family, weight-lifting or boxing, or wondering the city to dine at the 
                         next mouth-watering restaurant. 
                     </h>
                 </div>
