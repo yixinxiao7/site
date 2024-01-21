@@ -220,6 +220,15 @@
     padding-right: 0%;
   }
 
+  .header {
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+
+  .header div {
+    padding: 1.5rem;
+  }
+
   .card {
     padding: 1rem 2.5rem;
   }
