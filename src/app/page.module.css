@@ -54,10 +54,11 @@
 
 .icon {
   padding: .5rem;
+  color: #476930;
 }
 
 .icon:hover {
-  color:#ecbf1c;
+  color:#86b049;
 }
 
 .grid {
@@ -125,14 +126,12 @@
   padding-top: 0rem;
 }
 
-.center_new a {
+.box a {
   font-size: 2rem;
-  font-family: var(--font-mono);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: #ecbf1c;
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
   margin: 0;
@@ -140,7 +139,7 @@
   background-color: rgba(var(--callout-rgb), 0.5);
 }
 
-.center_new a:hover {
+.box a:hover {
   color: rgb(67, 67, 248);
 }
 
@@ -330,8 +329,8 @@
   }
 }
 
-.yellow {
-  color: #ecbf1c;
+.green {
+  color: #476930;
 }
 
 .michigan_blue {

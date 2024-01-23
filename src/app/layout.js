@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Oswald } from 'next/font/google'
 const oswald = Oswald({
-    weight: '400',
+    weight: '500',
     subsets: ['latin'],
   })
  

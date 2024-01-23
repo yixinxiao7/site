@@ -6,10 +6,10 @@ export default function Home() {
     <main className={styles.main}>
       <div/>
       <div className={styles.center}>
-        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.yellow} style={{fontSize: '6rem'}}>Yixin</b>!</h1>
+        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.green} style={{fontSize: '6rem'}}>Yixin</b>!</h1>
       </div>
 
-      <div className={styles.grid}>
+      <div className={styles.grid} style={{color: '#476930'}}>
         <Link
           href="/about_me"
           className={styles.card}

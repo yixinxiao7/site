@@ -20,7 +20,7 @@ export default function AboutMe() {
                 />
                 <div className={styles.description_new}>
                     <h>
-                        My name is <b className={styles.yellow}>Yixin Xiao</b> (ee-shin sh-ow). I'm a senior software engineer based in New York City, working 
+                        My name is <b className={styles.green}>Yixin Xiao</b> (ee-shin sh-ow). I'm a senior software engineer based in New York City, working 
                         at Capital One. 
                         <br/><br/>
                         I'm passionate about full-stack engineering, data/AI science, and misinformation management. While at UMich, I enjoyed being a part of Tau Beta Pi (Engineering honor society) and Michigan Hackers. The experiences I gained from these student organizations, coupled with my career journey, have significantly shaped these passions of mine.

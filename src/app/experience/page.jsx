@@ -17,7 +17,7 @@ export default function Experience() {
                     </h>
                 </div>
             </div>
-            <div className={styles.center_new}>
+            <div className={`${styles.box} ${styles.green}`}>
                 <p>
                     <a
                         href="/Resume_2024.pdf"

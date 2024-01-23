@@ -13,11 +13,11 @@ export default function Education() {
                     </h1>
                     <hr/>
                 <h1>
-                    <b className={styles.yellow}>University of Michigan - Ann Arbor</b>  
+                    <b className={styles.green}>University of Michigan - Ann Arbor</b>  
                 </h1>
                 <h2 className={styles.michigan_blue}>BSE in Computer Science Engineering</h2>
                 <h2 className={styles.michigan_blue}>Minor in Business Administration</h2>
-                <h2 className={styles.yellow}>2017-2021</h2>
+                <h2 className={styles.green}>2017-2021</h2>
                 </div>
             </div>
             <div className={styles.center} style={{paddingTop: '0'}}>
