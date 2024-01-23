@@ -16,23 +16,18 @@ export default function AboutMe() {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ width: '30%', height: 'auto', borderRadius: '30px'}}
+                    style={{ width: '50%', height: 'auto', borderRadius: '30px'}}
                 />
                 <div className={styles.description_new}>
                     <h>
                         My name is <b className={styles.yellow}>Yixin Xiao</b> (ee-shin sh-ow). I'm a senior software engineer based in New York City, working 
-                        at Capital One currently. 
+                        at Capital One. 
                         <br/><br/>
-                        I'm passionate in full-stack engineering, data/AI science as well as misinformation management. 
-                        While at school, I was heavily involved with Tau Beta Pi (Engineering honor society)
-                        as well as Michigan Hackers. My time in these student orgs along with my career experiences
-                        have profoundly shaped said passions.
+                        I'm passionate about full-stack engineering, data/AI science, and misinformation management. While at UMich, I enjoyed being a part of Tau Beta Pi (Engineering honor society) and Michigan Hackers. The experiences I gained from these student organizations, coupled with my career journey, have significantly shaped these passions of mine.
                         <br/><br/>
-                        If you catch me outside the office, I'll most likely be looking for the next plant to join
-                        my humble plant family, weight-lifting or boxing, or wondering the city to dine at the 
-                        next mouth-watering restaurant. 
+                        If you catch me outside the office, chances are I'll be on the hunt for the next plant to add to my humble plant family, weight-lifting or boxing, or simply exploring the city in search of the next mouth-watering restaurant to dine at.
                         <br/><br/>
-                        Want to connect? I'm reachable at any of the places below!
+                        Interested in connecting? You can reach me through any of the channels listed below!
                         <br/><br/>
                         <a
                             href='mailto:yixinxiao7@gmail.com'

@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div/>
       <div className={styles.center}>
-        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.yellow} style={{fontSize: '8rem'}}>Yixin</b>!</h1>
+        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.yellow} style={{fontSize: '6rem'}}>Yixin</b>!</h1>
       </div>
 
       <div className={styles.grid}>
