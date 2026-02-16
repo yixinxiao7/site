@@ -1,42 +1,27 @@
-import Link from 'next/link'
+import Hero from "@/components/professional/Hero";
+import Experience from "@/components/professional/Experience";
+import Certifications from "@/components/professional/Certifications";
+import Projects from "@/components/professional/Projects";
+import Contact from "@/components/professional/Contact";
+import ScrollReveal from "@/components/ScrollReveal";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function ProfessionalPage() {
   return (
-    <main className={styles.main}>
-      <div/>
-      <div className={styles.center}>
-        <h1 style={{fontSize: '5rem'}}>Hi, I'm <b className={styles.green} style={{fontSize: '6rem'}}>Yixin</b>!</h1>
-      </div>
-
-      <div className={styles.grid} style={{color: '#476930'}}>
-        <Link
-          href="/about_me"
-          className={styles.card}
-        >
-          <h2>
-            Who am I?
-          </h2>
-        </Link>
-
-        <Link
-          href="/education"
-          className={styles.card}
-        >
-          <h2>
-            My Education
-          </h2>
-        </Link>
-
-        <Link
-          href="/experience"
-          className={styles.card}
-        >
-          <h2>
-            What I've done
-          </h2>
-        </Link>
-      </div>
+    <main className={styles.page}>
+      <Hero />
+      <ScrollReveal>
+        <Experience />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Certifications />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Projects />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
     </main>
   );
 }

@@ -1,0 +1,70 @@
+/* Masonry grid */
+.grid {
+  columns: 3;
+  column-gap: 12px;
+  padding: 12px;
+}
+
+/* Gallery item */
+.item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.placeholder {
+  width: 100%;
+  display: block;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.caption {
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  transform: translateY(8px);
+  transition: transform 0.35s ease;
+}
+
+.item:hover .caption {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    columns: 1;
+  }
+}

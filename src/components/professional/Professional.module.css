@@ -1,0 +1,309 @@
+/* Shared professional section styles */
+.section {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.sectionAlt {
+  background: var(--bg-secondary);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionLabel {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-cormorant), serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  padding-top: var(--nav-height);
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroName {
+  font-family: var(--font-cormorant), serif;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.heroTagline {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+.heroDivider {
+  width: 60px;
+  height: 1px;
+  background: var(--text-accent);
+  margin: 2rem 0;
+}
+
+/* Experience */
+.experienceItem {
+  margin-bottom: 3rem;
+}
+
+.experienceItem:last-child {
+  margin-bottom: 0;
+}
+
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.companyName {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.experiencePeriod {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.experienceRole {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+
+.experienceDesc {
+  list-style: none;
+  padding: 0;
+}
+
+.experienceDesc li {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+.experienceDesc li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-accent);
+}
+
+/* Education */
+.educationItem {
+  margin-bottom: 1.5rem;
+}
+
+.schoolName {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.degree {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+/* Certifications */
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certItem:last-child {
+  border-bottom: none;
+}
+
+.certName {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.certIssuer {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+/* Projects */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.projectCard {
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.projectPlaceholder {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Contact / Footer */
+.contact {
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contactLink:hover {
+  color: var(--text-accent);
+}
+
+.resumeLink {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--text-accent);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.resumeLink:hover {
+  background: var(--text-accent);
+  color: var(--bg-primary);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .heroName {
+    font-size: 3rem;
+  }
+
+  .heroTitle {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceHeader {
+    flex-direction: column;
+  }
+
+  .contactLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
