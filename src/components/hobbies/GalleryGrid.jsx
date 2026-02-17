@@ -31,7 +31,7 @@ export default function GalleryGrid() {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
-        <h1 className={styles.title}>i like taking photos!</h1>
+        <h1 className={styles.title}><b>i like taking photos!</b></h1>
         <p className={styles.subtitle}>
           here's a couple that i've taken over the years - i try to capture the life and energy of the places i visit.
         </p>

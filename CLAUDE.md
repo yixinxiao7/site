@@ -9,6 +9,7 @@ Yixin Xiao — Senior Software Engineer at Capital One, NYC
 - **Styling**: CSS Modules + global CSS variables (`globals.css`)
 - **Fonts**: Cormorant Garamond (professional page), IBM Plex Mono (hobbies page) — loaded via `next/font/google` as CSS variables (`--font-cormorant`, `--font-ibm-plex`)
 - **Icons**: `react-icons` — Feather icons (`fi`) for professional page, Font Awesome 6 (`fa6`) for hobbies (FaStrava, FaDumbbell)
+- **Maps**: `react-simple-maps` — SVG US map with AlbersUsa projection, TopoJSON from `us-atlas@3`
 - **Package manager**: npm
 - **Large files**: Git LFS for `.mp4`/`.MP4` video files
 
@@ -40,7 +41,9 @@ src/
 │       ├── GalleryItem.jsx           # Image/video card with hover caption overlay
 │       ├── Hobbies.module.css        # Gallery grid + header styles
 │       ├── Fitness.jsx               # Fitness section — description, Strava/Hevy links, race list
-│       └── Fitness.module.css
+│       ├── Fitness.module.css
+│       ├── Traveling.jsx             # Traveling section — description + interactive US state map
+│       └── Traveling.module.css
 ├── data/
 │   ├── experience.js                 # Work experience, education, contact data
 │   ├── certifications.js             # Certifications data
@@ -57,19 +60,20 @@ public/
 | Route      | Description                                                         |
 |------------|---------------------------------------------------------------------|
 | `/`        | Professional portfolio — Hero, Experience, Certs, Projects, Contact |
-| `/hobbies` | Hobbies page — photo/video masonry collage + fitness section        |
+| `/hobbies` | Hobbies page — photo/video masonry collage + fitness + traveling    |
 
 ## Design
 - **Theme**: Dark & refined — near-black bg `#0c0c0c`, warm off-white text `#e8e4df`, gold accent `#c4b998`
 - **CSS variables**: `--bg-primary`, `--bg-secondary`, `--bg-tertiary`, `--text-primary`, `--text-secondary`, `--text-accent`, `--border-subtle`, `--nav-height`
 - **Professional page**: Cormorant Garamond, vertical scroll, scroll-triggered fade-in animations, sections differentiated by spacing + subtle borders + alternating bg shades
-- **Hobbies page**: IBM Plex Mono, two sections:
+- **Hobbies page**: IBM Plex Mono, three sections:
   1. **Photo gallery**: Masonry grid using flexbox columns with a shortest-column distribution algorithm. Each section component contains its own header/description (self-contained pattern). Hover shows caption overlay.
   2. **Fitness**: 2/3 + 1/3 layout — left has description + Strava/Hevy icons (Hevy shows tooltip on hover), right has race list
+  3. **Traveling**: Full-width section — intro paragraph + interactive US map (react-simple-maps). Visited states filled with gold accent color, unvisited states dim. Hover tooltip follows cursor showing state name. States list maintained in `visitedStates` array.
 - **Nav**: Sticky top bar with backdrop blur, two tabs, active state gold underline
 
 ## Key Patterns
-- **Self-contained sections**: Each section component (GalleryGrid, Fitness) contains its own header, description, and content. The page file (`hobbies/page.jsx`) simply composes them.
+- **Self-contained sections**: Each section component (GalleryGrid, Fitness, Traveling) contains its own header, description, and content. The page file (`hobbies/page.jsx`) simply composes them.
 - **Fonts as CSS variables**: Both fonts loaded in `layout.js`, each page sets `font-family` via its CSS module
 - **ScrollReveal**: Wraps professional page sections for fade-in-on-scroll via Intersection Observer. Uses CSS classes `hidden-initial` / `revealed` defined in `globals.css`
 - **Gallery masonry**: `GalleryGrid` uses a greedy shortest-column algorithm (`getHeight` parses aspect ratios) to distribute items evenly across 3 flexbox columns
@@ -87,6 +91,7 @@ public/
 - **Contact**: yixinxiao7@gmail.com, linkedin.com/in/yixin-xiao, github.com/yixinxiao7
 - **Fitness**: Strava (athlete/119032446), Hevy (bigyeesh). Races: 2024 Philadelphia Marathon, 2025 Atlanta Half-Marathon, 2025 Dallas Marathon
 - **Gallery**: 22 photos + 3 videos from NYC, Boston, Hawaii, China, Philadelphia, Seattle, San Francisco, etc.
+- **Traveling**: 24 visited US states tracked in `Traveling.jsx` `visitedStates` array (use full state names, e.g. "New York")
 
 ## Scripts
 ```
