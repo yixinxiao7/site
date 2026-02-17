@@ -29,14 +29,22 @@ export default function GalleryGrid() {
   const columns = useColumns(galleryItems, 3);
 
   return (
-    <div className={styles.grid}>
-      {columns.map((col, i) => (
+    <section className={styles.section}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>i like taking photos!</h1>
+        <p className={styles.subtitle}>
+          here's a couple that i've taken over the years - i try to capture the life and energy of the places i visit.
+        </p>
+      </header>
+      <div className={styles.grid}>
+        {columns.map((col, i) => (
         <div key={i} className={styles.column}>
           {col.map((item) => (
             <GalleryItem key={item.id} item={item} />
           ))}
         </div>
       ))}
-    </div>
+      </div>
+    </section>
   );
 }
