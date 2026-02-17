@@ -1,5 +1,0 @@
-.page {
-  font-family: var(--font-ibm-plex), monospace;
-  padding-top: calc(var(--nav-height) + 12px);
-  min-height: 100vh;
-}

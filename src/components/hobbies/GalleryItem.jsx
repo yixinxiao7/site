@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import styles from "./Creative.module.css";
+import styles from "./Hobbies.module.css";
 
 export default function GalleryItem({ item }) {
   const videoRef = useRef(null);

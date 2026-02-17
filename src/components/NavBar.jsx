@@ -17,8 +17,8 @@ export default function NavBar() {
           my work experience
         </Link>
         <Link
-          href="/creative"
-          className={`${styles.tab} ${pathname === "/creative" ? styles.active : ""}`}
+          href="/hobbies"
+          className={`${styles.tab} ${pathname === "/hobbies" ? styles.active : ""}`}
         >
           other things i like to do
         </Link>
