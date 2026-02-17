@@ -1,0 +1,134 @@
+.section {
+  border-top: 1px solid var(--border-subtle);
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  gap: 3rem;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.description {
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.iconLink {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.iconLink:hover {
+  color: var(--text-accent);
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--bg-tertiary);
+}
+
+/* Races */
+.racesTitle {
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--text-accent);
+  margin-bottom: 1.25rem;
+}
+
+.raceList {
+  list-style: none;
+  padding: 0;
+}
+
+.raceItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.raceItem:last-child {
+  border-bottom: none;
+}
+
+.raceName {
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.raceMeta {
+  font-family: var(--font-ibm-plex), monospace;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
