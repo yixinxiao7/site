@@ -8,9 +8,9 @@ export default function Hero() {
         <p className={styles.heroTitle}>Senior Software Engineer at Capital One</p>
         <div className={styles.heroDivider} />
         <p className={styles.heroTagline}>
-          Full-stack engineer specializing in architectural, platform, and data
-          engineering. Passionate about building scalable systems with AWS and
-          Databricks.
+          5 years of experience building backend, platform, and cloud
+          infrastructure systems on AWS. Strong background in Python,
+          Terraform, Databricks, and scalable internal platforms.
         </p>
       </div>
     </section>

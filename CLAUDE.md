@@ -50,8 +50,8 @@ src/
 │   └── gallery.js                    # Gallery items — 22 images + 3 videos with aspect ratios
 public/
 ├── me.jpeg                           # Profile photo
-├── Resume_2024.pdf                   # Downloadable resume
-├── gallery/                          # Photo/video assets (IMG_1–IMG_24.JPEG, VID_1–VID_3.mp4)
+├── Resume_2026.pdf                   # Downloadable resume
+├── gallery/                          # Photo/video assets (IMG_1–IMG_24.JPEG, VID_1–VID_3.MP4/mp4)
 ├── next.svg
 └── vercel.svg
 ```
@@ -77,7 +77,7 @@ public/
 - **Fonts as CSS variables**: Both fonts loaded in `layout.js`, each page sets `font-family` via its CSS module
 - **ScrollReveal**: Wraps professional page sections for fade-in-on-scroll via Intersection Observer. Uses CSS classes `hidden-initial` / `revealed` defined in `globals.css`
 - **Gallery masonry**: `GalleryGrid` uses a greedy shortest-column algorithm (`getHeight` parses aspect ratios) to distribute items evenly across 3 flexbox columns
-- **Gallery data**: Items in `src/data/gallery.js` — each has `type`, `src`, `aspectRatio`, `caption`. When `src` is null, a colored placeholder div renders
+- **Gallery data**: Items in `src/data/gallery.js` — each has `id`, `type`, `src`, `aspectRatio`, `caption`
 - **Video autoplay**: `GalleryItem` uses Intersection Observer to play/pause videos when in/out of viewport. Videos require `muted loop playsInline` attributes
 - **All text is lowercase**: The site uses lowercase throughout for a casual, personal tone
 - **Path alias**: `@/*` maps to `./src/*` (jsconfig.json)
@@ -90,8 +90,8 @@ public/
 - **Skills**: Full-stack, architectural/platform/data engineering, AWS, Databricks
 - **Contact**: yixinxiao7@gmail.com, linkedin.com/in/yixin-xiao, github.com/yixinxiao7
 - **Fitness**: Strava (athlete/119032446), Hevy (bigyeesh). Races: 2024 Philadelphia Marathon, 2025 Atlanta Half-Marathon, 2025 Dallas Marathon
-- **Gallery**: 22 photos + 3 videos from NYC, Boston, Hawaii, China, Philadelphia, Seattle, San Francisco, etc.
-- **Traveling**: 24 visited US states tracked in `Traveling.jsx` `visitedStates` array (use full state names, e.g. "New York")
+- **Gallery**: 24 photos + 3 videos from NYC, Boston, Hawaii, China, Philadelphia, Seattle, San Francisco, etc.
+- **Traveling**: 25 visited US states tracked in `Traveling.jsx` `visitedStates` array (use full state names, e.g. "New York")
 
 ## Scripts
 ```
