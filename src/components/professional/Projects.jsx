@@ -39,6 +39,9 @@ export default function Projects() {
               </div>
               <span className={styles.projectSubtitle}>{project.subtitle}</span>
               <p className={styles.projectDescription}>{project.description}</p>
+              {project.warning && (
+                <p className={styles.projectWarning}>⚠ {project.warning}</p>
+              )}
             </div>
           ))}
         </div>

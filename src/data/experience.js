@@ -77,6 +77,8 @@ export const projects = [
       "Web app for categorizing uncategorized liked songs into playlists with in-app playback and bulk assignment. Built with Next.js 15, React 19, TypeScript, Tailwind CSS, FastAPI, and Spotify OAuth 2.0.",
     link: "https://github.com/yixinxiao7/i-wish-spotify-could",
     webapp: "https://i-wish-spotify-could.yixinx.com/",
+    warning:
+      "this app uses spotify's api in development mode — users must be allowlisted to log in. see the repo README for details on how to get access.",
   },
 ];
 
