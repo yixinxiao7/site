@@ -6,7 +6,7 @@ export default function Experience() {
     <>
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.container}>
-        <p className={styles.sectionLabel}>Experience</p>
+        <h2 className={styles.sectionLabel}>Experience</h2>
 
         {experiences.map((exp, i) => (
           <div key={i} className={styles.experienceItem}>
@@ -30,7 +30,7 @@ export default function Experience() {
 
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.sectionLabel}>Education</p>
+        <h2 className={styles.sectionLabel}>Education</h2>
         <div className={styles.experienceHeader}>
           <span className={styles.companyName}>{education.school}</span>
           <span className={styles.experiencePeriod}>{education.period}</span>

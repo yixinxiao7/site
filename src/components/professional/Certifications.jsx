@@ -5,7 +5,7 @@ export default function Certifications() {
   return (
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.container}>
-        <p className={styles.sectionLabel}>Certifications</p>
+        <h2 className={styles.sectionLabel}>Certifications</h2>
         {certifications.map((cert, i) => (
           <div key={i} className={styles.certItem}>
             <span className={styles.certName}>{cert.name}</span>

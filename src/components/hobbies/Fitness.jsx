@@ -17,11 +17,11 @@ export default function Fitness() {
     <section className={styles.section}>
       <div className={styles.layout}>
         <div className={styles.left}>
-          <h1 className={styles.title}>i'm a big fan of challenging myself in all aspects of my life.</h1>
+          <h2 className={styles.title}>i'm a big fan of challenging myself in all aspects of my life.</h2>
           <p className={styles.description}>
             <br />physical is no exception - i like to box and lift.
             <br />i also run - not necessarily because i like it, but because i find it difficult.
-            <br />to the right is a list of races i have challenged myself to compete in.
+            <br />here's a list of races i have challenged myself to compete in.
             <br />i plan to continue this list and work up to a full ironman.
             <br />feel free to follow my strava and hevy profiles and roast my numbers.
           </p>
@@ -39,12 +39,19 @@ export default function Fitness() {
               className={styles.iconWrapper}
               onMouseEnter={() => setShowHevy(true)}
               onMouseLeave={() => setShowHevy(false)}
+              onFocus={() => setShowHevy(true)}
+              onBlur={() => setShowHevy(false)}
             >
-              <span className={styles.iconLink} aria-label="Hevy username">
+              <span
+                className={styles.iconLink}
+                role="button"
+                tabIndex="0"
+                aria-label="Hevy username: bigyeesh"
+              >
                 <FaDumbbell size={24} />
               </span>
               {showHevy && (
-                <div className={styles.tooltip}>hevy - bigyeesh</div>
+                <div className={styles.tooltip} role="tooltip">hevy - bigyeesh</div>
               )}
             </div>
           </div>

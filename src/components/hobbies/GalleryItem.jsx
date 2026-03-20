@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 import styles from "./Hobbies.module.css";
 
 export default function GalleryItem({ item }) {
@@ -46,29 +47,37 @@ export default function GalleryItem({ item }) {
           ref={videoRef}
           className={styles.media}
           src={item.src}
+          aria-label={item.caption}
           muted
           loop
           playsInline
+          preload="none"
           style={{ aspectRatio: item.aspectRatio }}
         />
       );
     }
 
     return (
-      <img
+      <Image
         className={styles.media}
         src={item.src}
         alt={item.caption}
-        loading="lazy"
-        style={{ aspectRatio: item.aspectRatio }}
+        fill
+        sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 33vw"
       />
     );
   };
 
   return (
-    <div className={styles.item}>
+    <div
+      className={styles.item}
+      style={{ aspectRatio: item.type === "image" ? item.aspectRatio : undefined }}
+      tabIndex="0"
+      role="figure"
+      aria-label={item.caption}
+    >
       {renderMedia()}
-      <div className={styles.overlay}>
+      <div className={styles.overlay} aria-hidden="true">
         <span className={styles.caption}>{item.caption}</span>
       </div>
     </div>

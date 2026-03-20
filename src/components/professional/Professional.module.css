@@ -53,6 +53,27 @@
   width: 100%;
 }
 
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.heroText {
+  flex: 1;
+}
+
+.heroPhoto {
+  flex-shrink: 0;
+}
+
+.heroPhoto img {
+  width: 340px;
+  height: 340px;
+  border-radius: 12%;
+  object-fit: cover;
+}
+
 .heroName {
   font-family: var(--font-cormorant), serif;
   font-size: 5rem;
@@ -231,6 +252,11 @@
 .projectLink {
   color: var(--text-secondary);
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .projectLink:hover {
@@ -265,12 +291,12 @@
   font-family: var(--font-cormorant), serif;
   font-size: 0.85rem;
   font-weight: 400;
-  color: #d4a843;
+  color: var(--text-warning);
   line-height: 1.5;
   margin-top: 0.75rem;
   padding: 0.5rem 0.75rem;
-  border-left: 2px solid #d4a843;
-  background: rgba(212, 168, 67, 0.06);
+  border-left: 2px solid var(--text-warning);
+  background: color-mix(in srgb, var(--text-warning) 6%, transparent);
   border-radius: 0 2px 2px 0;
 }
 
@@ -299,6 +325,8 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.5rem 0;
 }
 
 .contactLink:hover {
@@ -306,7 +334,9 @@
 }
 
 .resumeLink {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-top: 2rem;
   font-family: var(--font-cormorant), serif;
   font-size: 0.85rem;
@@ -314,7 +344,8 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-accent);
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
   border: 1px solid var(--text-accent);
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -326,6 +357,16 @@
 
 /* Responsive */
 @media (max-width: 700px) {
+  .heroContent {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .heroPhoto img {
+    width: 200px;
+    height: 200px;
+  }
+
   .heroName {
     font-size: 3rem;
   }

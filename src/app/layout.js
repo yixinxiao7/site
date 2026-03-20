@@ -23,6 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${cormorant.variable} ${ibmPlexMono.variable}`}>
+        <a href="#main-content" className="skip-link">
+          skip to content
+        </a>
         <NavBar />
         {children}
       </body>

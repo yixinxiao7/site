@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section className={styles.contact}>
       <div className={styles.container}>
-        <p className={styles.sectionLabel}>Get in touch</p>
+        <h2 className={styles.sectionLabel}>Get in touch</h2>
         <div className={styles.contactLinks}>
           <a href={`mailto:${contact.email}`} className={styles.contactLink}>
             <FiMail size={16} />
@@ -37,7 +37,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className={styles.resumeLink}
         >
-          <FiDownload size={14} style={{ marginRight: "0.4rem" }} />
+          <FiDownload size={14} />
           Resume
         </a>
       </div>

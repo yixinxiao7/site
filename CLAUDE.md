@@ -106,3 +106,25 @@ npm run lint   # Run linter
 - **Branches**: `2026_site_revamp` (active), `2024_site_revamp` (main)
 - **Target platform**: Vercel
 - No environment variables required
+
+## Design Context
+
+### Users
+Recruiters and hiring managers evaluating Yixin for engineering roles. They're scanning quickly, often on desktop, comparing multiple candidates. The site needs to convey competence and seniority at a glance while being easy to navigate. The hobbies page adds dimension — showing a well-rounded person beyond the resume.
+
+### Brand Personality
+Refined, understated, confident. The site should feel like a well-tailored suit — nothing loud, but everything intentional. The lowercase text and warm gold accents create quiet authority without pretension.
+
+### Aesthetic Direction
+- **Visual tone**: Dark, editorial, unhurried. Generous whitespace. Let content breathe.
+- **Theme**: Dark mode only. Near-black backgrounds with warm undertones (`#0c0c0c`), off-white text (`#e8e4df`), gold accent (`#c4b998`). No pure whites or harsh contrasts.
+- **Typography**: Serif (Cormorant Garamond) for the professional page conveys sophistication. Monospace (IBM Plex Mono) for hobbies conveys casual precision.
+- **Motion**: Subtle and purposeful — scroll-reveal fades, hover transitions. Never bouncy or attention-seeking. Respect `prefers-reduced-motion`.
+- **Anti-references**: No neon gradients, no bento grids, no "developer portfolio template" aesthetics, no excessive animations or parallax.
+
+### Design Principles
+1. **Substance over flash** — Every element should earn its place. No decorative filler. If it doesn't communicate something, remove it.
+2. **Quiet confidence** — The design should impress without trying to. Restraint signals seniority. Let quality content and deliberate spacing do the talking.
+3. **Scannable hierarchy** — Recruiters spend seconds, not minutes. Clear visual hierarchy, strong section differentiation, and legible type sizes ensure key information lands fast.
+4. **Warmth in the details** — The gold accent, lowercase text, and personal hobbies page prevent the site from feeling cold or corporate. Small touches of personality matter.
+5. **Consistency across pages** — Despite different fonts and moods, both pages share the same color palette, spacing philosophy, and interaction patterns. They feel like two sides of the same person.

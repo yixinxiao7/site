@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.sectionLabel}>Projects</p>
+        <h2 className={styles.sectionLabel}>Projects</h2>
         <div className={styles.projectsGrid}>
           {projects.map((project, i) => (
             <div key={i} className={styles.projectCard}>

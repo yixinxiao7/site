@@ -54,7 +54,7 @@ export default function Traveling() {
 
   return (
     <section className={styles.section}>
-      <h1 className={styles.title}><b>i like going to different places.</b></h1>
+      <h2 className={styles.title}><b>i like going to different places.</b></h2>
       <p className={styles.description}>
         i find travel as one of the greatest tools to learn about different cultures and perspectives.
         <br />one of my domestic travel goals is to visit all 50 states.
@@ -64,8 +64,10 @@ export default function Traveling() {
         className={styles.mapContainer}
         ref={containerRef}
         onMouseMove={handleMouseMove}
+        role="img"
+        aria-label={`Map of the United States showing ${visitedStates.length} visited states`}
       >
-        <ComposableMap projection="geoAlbersUsa" className={styles.map}>
+        <ComposableMap projection="geoAlbersUsa" className={styles.map} aria-hidden="true">
           <Geographies geography={GEO_URL}>
             {({ geographies }) =>
               geographies.map((geo) => {
@@ -76,9 +78,7 @@ export default function Traveling() {
                     key={geo.rpiId}
                     geography={geo}
                     className={isVisited ? styles.visited : styles.unvisited}
-                    onMouseEnter={() => {
-                      if (isVisited) setTooltip(name.toLowerCase());
-                    }}
+                    onMouseEnter={() => setTooltip(name.toLowerCase())}
                     onMouseLeave={() => setTooltip("")}
                     style={{
                       default: { outline: "none" },
@@ -95,11 +95,17 @@ export default function Traveling() {
           <div
             className={styles.tooltip}
             style={{ left: mousePos.x, top: mousePos.y }}
+            role="tooltip"
           >
             {tooltip}
           </div>
         )}
       </div>
+      <ul className={styles.srOnly} aria-label="Visited states">
+        {visitedStates.map((state) => (
+          <li key={state}>{state}</li>
+        ))}
+      </ul>
     </section>
   );
 }
