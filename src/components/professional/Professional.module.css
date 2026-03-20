@@ -222,6 +222,12 @@
   align-items: center;
 }
 
+.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .projectLink {
   color: var(--text-secondary);
   transition: color 0.3s ease;

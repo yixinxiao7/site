@@ -60,6 +60,7 @@ export const projects = [
     description:
       "Containerized travel planning app with React 18, Express, JWT authentication, Docker, and Nginx with TLS. Automated development workflows using LLM-powered multi-agent orchestration with integrated code review and QA testing.",
     link: "https://github.com/yixinxiao7/triplanner",
+    webapp: "https://triplanner.yixinx.com/",
   },
   {
     name: "Diet Tracker",
@@ -67,6 +68,7 @@ export const projects = [
     description:
       "Serverless nutrition tracker on AWS (Lambda, API Gateway, RDS PostgreSQL, Cognito) with OAuth 2.0 PKCE authentication. End-to-end CI/CD with GitHub Actions and automated Playwright testing.",
     link: "https://github.com/yixinxiao7/diet-tracker",
+    webapp: "https://diet-tracker.yixinx.com/",
   },
   {
     name: "I Wish Spotify Could",
@@ -74,6 +76,7 @@ export const projects = [
     description:
       "Web app for categorizing uncategorized liked songs into playlists with in-app playback and bulk assignment. Built with Next.js 15, React 19, TypeScript, Tailwind CSS, FastAPI, and Spotify OAuth 2.0.",
     link: "https://github.com/yixinxiao7/i-wish-spotify-could",
+    webapp: "https://i-wish-spotify-could.yixinx.com/",
   },
 ];
 
