@@ -27,5 +27,5 @@ export const galleryItems = [
   { id: 26, type: "image", src: "/gallery/IMG_23.JPEG", aspectRatio: "4/3", caption: "view from long island city, ny" },
   { id: 27, type: "image", src: "/gallery/IMG_24.JPEG", aspectRatio: "4/3", caption: "jiuzhaigou" },
   { id: 28, type: "image", src: "/gallery/IMG_25.jpeg", aspectRatio: "4/3", caption: "laguna beach, ca" },
-  { id: 29, type: "image", src: "/gallery/IMG_26.jpeg", aspectRatio: "4/3", caption: "union square, nyc" },
+  // { id: 29, type: "image", src: "/gallery/IMG_26.jpeg", aspectRatio: "4/3", caption: "union square, nyc" },
 ];

@@ -22,7 +22,7 @@ export default function Hero() {
             <p className={styles.heroTagline}>
               5 years of experience building backend, platform, and cloud
               infrastructure systems on AWS. Strong background in Python,
-              Terraform, Databricks, and scalable internal platforms.
+              Terraform, Databricks, agentic AI tooling, and scalable internal platforms.
             </p>
           </div>
         </div>

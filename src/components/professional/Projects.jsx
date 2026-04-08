@@ -9,7 +9,13 @@ export default function Projects() {
         <h2 className={styles.sectionLabel}>Projects</h2>
         <div className={styles.projectsGrid}>
           {projects.map((project, i) => (
-            <div key={i} className={styles.projectCard}>
+            <div
+              key={i}
+              className={`${styles.projectCard}${project.featured ? ` ${styles.projectCardFeatured}` : ""}`}
+            >
+              {project.featured && (
+                <span className={styles.projectFeaturedBadge}>featured</span>
+              )}
               <div className={styles.projectHeader}>
                 <span className={styles.projectName}>{project.name}</span>
                 <div className={styles.projectLinks}>
@@ -39,6 +45,9 @@ export default function Projects() {
               </div>
               <span className={styles.projectSubtitle}>{project.subtitle}</span>
               <p className={styles.projectDescription}>{project.description}</p>
+              {project.note && (
+                <p className={styles.projectNote}>↑ {project.note}</p>
+              )}
               {project.warning && (
                 <p className={styles.projectWarning}>⚠ {project.warning}</p>
               )}

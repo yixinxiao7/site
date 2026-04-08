@@ -237,6 +237,28 @@
   min-height: 160px;
 }
 
+.projectCardFeatured {
+  grid-column: 1 / -1;
+  border-color: var(--text-accent);
+  background: color-mix(in srgb, var(--text-accent) 5%, transparent);
+  position: relative;
+}
+
+.projectFeaturedBadge {
+  display: inline-block;
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8960c;
+  border: 1px solid #b8960c;
+  border-radius: 2px;
+  padding: 0.1rem 0.5rem;
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+
 .projectHeader {
   display: flex;
   justify-content: space-between;
@@ -246,7 +268,7 @@
 .projectLinks {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0;
 }
 
 .projectLink {
@@ -255,8 +277,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 28px;
+  min-height: 28px;
 }
 
 .projectLink:hover {
@@ -285,6 +307,14 @@
   font-weight: 300;
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.projectNote {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #b8960c;
+  margin-top: 0.75rem;
 }
 
 .projectWarning {

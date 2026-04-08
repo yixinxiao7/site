@@ -55,12 +55,30 @@ export const education = {
 
 export const projects = [
   {
+    name: "multi-agent framework",
+    subtitle: "Autonomous AI Development Platform",
+    description:
+      "Multi-agent platform that orchestrates eight specialized AI agents — manager, designer, frontend/backend engineers, QA, deployment, monitoring, and user tester — through a 10-phase sprint workflow to autonomously build full-stack applications end-to-end. Supports web and mobile targets with configurable autonomy levels, user feedback integration via iterative sprints, and automated Playwright testing.",
+    link: "https://github.com/yixinxiao7/multi-agent-framework",
+    featured: true,
+  },
+  {
     name: "Triplanner",
     subtitle: "Full-Stack Travel Planning App",
     description:
       "Containerized travel planning app with React 18, Express, JWT authentication, Docker, and Nginx with TLS. Automated development workflows using LLM-powered multi-agent orchestration with integrated code review and QA testing.",
     link: "https://github.com/yixinxiao7/triplanner",
     webapp: "https://triplanner.yixinx.com/",
+    note: "built using the multi-agent framework above",
+  },
+  {
+    name: "Plant Guardians",
+    subtitle: "AI-Powered Plant Care App",
+    description:
+      "Plant care management app with React 18, Vite, Node.js, Express, and PostgreSQL. Track plant collections with photos, set custom watering and fertilizing schedules, view a care dashboard with overdue and upcoming tasks, and get AI-powered care advice via Google Gemini. Includes email reminders, care analytics, and activity streaks.",
+    link: "https://github.com/yixinxiao7/plant_guardians",
+    webapp: "https://plantguardians.yixinx.com/",
+    note: "built using the multi-agent framework above",
   },
   {
     name: "Diet Tracker",
