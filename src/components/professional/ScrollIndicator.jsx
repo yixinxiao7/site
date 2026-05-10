@@ -26,7 +26,7 @@ export default function ScrollIndicator() {
       aria-label="scroll to experience"
       className={`${styles.scrollIndicator} ${hidden ? styles.scrollIndicatorHidden : ""}`}
     >
-      <span className={styles.scrollIndicatorLabel}>scroll</span>
+      <span className={styles.scrollIndicatorLabel}>What I&apos;ve Done</span>
       <FiChevronDown className={styles.scrollIndicatorIcon} aria-hidden="true" />
     </button>
   );
