@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Professional.module.css";
+import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
@@ -27,6 +28,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <ScrollIndicator />
     </section>
   );
 }

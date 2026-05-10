@@ -30,8 +30,9 @@ src/
 │   ├── NavBar.module.css
 │   ├── ScrollReveal.jsx              # Intersection Observer wrapper for fade-in animations
 │   ├── professional/
-│   │   ├── Hero.jsx                  # Name, title, tagline
-│   │   ├── Experience.jsx            # Work history + education
+│   │   ├── Hero.jsx                  # Name, title, tagline + ScrollIndicator
+│   │   ├── ScrollIndicator.jsx       # Bouncing scroll-down arrow at bottom of Hero (smooth-scrolls to #experience, fades past 80px)
+│   │   ├── Experience.jsx            # Work history + education (id="experience" — scroll target)
 │   │   ├── Certifications.jsx        # AWS cert etc.
 │   │   ├── Projects.jsx              # Placeholder project cards
 │   │   ├── Contact.jsx               # Email, LinkedIn, GitHub, resume download
@@ -65,7 +66,7 @@ public/
 ## Design
 - **Theme**: Dark & refined — near-black bg `#0c0c0c`, warm off-white text `#e8e4df`, gold accent `#c4b998`
 - **CSS variables**: `--bg-primary`, `--bg-secondary`, `--bg-tertiary`, `--text-primary`, `--text-secondary`, `--text-accent`, `--border-subtle`, `--nav-height`
-- **Professional page**: Cormorant Garamond, vertical scroll, scroll-triggered fade-in animations, sections differentiated by spacing + subtle borders + alternating bg shades
+- **Professional page**: Cormorant Garamond, vertical scroll, scroll-triggered fade-in animations, sections differentiated by spacing + subtle borders + alternating bg shades. Hero is `calc(100vh - 80px)` so the next section peeks above the fold; a bouncing scroll-down arrow at the bottom of the hero hints at content below.
 - **Hobbies page**: IBM Plex Mono, three sections:
   1. **Photo gallery**: Masonry grid using flexbox columns with a shortest-column distribution algorithm. Each section component contains its own header/description (self-contained pattern). Hover shows caption overlay.
   2. **Fitness**: 2/3 + 1/3 layout — left has description + Strava/Hevy icons (Hevy shows tooltip on hover), right has race list
@@ -75,7 +76,7 @@ public/
 ## Key Patterns
 - **Self-contained sections**: Each section component (GalleryGrid, Fitness, Traveling) contains its own header, description, and content. The page file (`hobbies/page.jsx`) simply composes them.
 - **Fonts as CSS variables**: Both fonts loaded in `layout.js`, each page sets `font-family` via its CSS module
-- **ScrollReveal**: Wraps professional page sections for fade-in-on-scroll via Intersection Observer. Uses CSS classes `hidden-initial` / `revealed` defined in `globals.css`
+- **ScrollReveal**: Wraps professional page sections for fade-in-on-scroll via Intersection Observer. Uses CSS classes `hidden-initial` / `revealed` defined in `globals.css`. Note: the first scroll target (`Experience`) is intentionally NOT wrapped — keeping it always-visible makes the initial scroll feel instant.
 - **Gallery masonry**: `GalleryGrid` uses a greedy shortest-column algorithm (`getHeight` parses aspect ratios) to distribute items evenly across 3 flexbox columns
 - **Gallery data**: Items in `src/data/gallery.js` — each has `id`, `type`, `src`, `aspectRatio`, `caption`
 - **Video autoplay**: `GalleryItem` uses Intersection Observer to play/pause videos when in/out of viewport. Videos require `muted loop playsInline` attributes

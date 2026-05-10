@@ -4,7 +4,7 @@ import styles from "./Professional.module.css";
 export default function Experience() {
   return (
     <>
-    <section className={`${styles.section} ${styles.sectionAlt}`}>
+    <section id="experience" className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.container}>
         <h2 className={styles.sectionLabel}>Experience</h2>
 

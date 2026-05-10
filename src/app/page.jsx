@@ -10,9 +10,7 @@ export default function ProfessionalPage() {
   return (
     <main id="main-content" className={styles.page}>
       <Hero />
-      <ScrollReveal>
-        <Experience />
-      </ScrollReveal>
+      <Experience />
       <ScrollReveal>
         <Certifications />
       </ScrollReveal>
