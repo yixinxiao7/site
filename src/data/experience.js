@@ -55,7 +55,7 @@ export const education = {
 
 export const projects = [
   {
-    name: "multi-agent framework",
+    name: "multi-agent agile framework",
     subtitle: "Autonomous AI Development Platform",
     description:
       "Multi-agent platform that orchestrates eight specialized AI agents — manager, designer, frontend/backend engineers, QA, deployment, monitoring, and user tester — through a 10-phase sprint workflow to autonomously build full-stack applications end-to-end. Supports web and mobile targets with configurable autonomy levels, user feedback integration via iterative sprints, and automated Playwright testing.",
