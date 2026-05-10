@@ -96,7 +96,7 @@ export const projects = [
     link: "https://github.com/yixinxiao7/i-wish-spotify-could",
     webapp: "https://i-wish-spotify-could.yixinx.com/",
     warning:
-      "this app uses spotify's api in development mode — users must be allowlisted to log in. see the repo README for details on how to get access.",
+      "This app uses spotify's api in development mode — users must be allowlisted to log in. See the repo README for details on how to get access.",
   },
 ];
 
