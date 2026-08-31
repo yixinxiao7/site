@@ -101,7 +101,7 @@ export default function Traveling() {
           </div>
         )}
       </div>
-      <ul className={styles.srOnly} aria-label="Visited states">
+      <ul className="sr-only" aria-label="Visited states">
         {visitedStates.map((state) => (
           <li key={state}>{state}</li>
         ))}
