@@ -1,11 +1,30 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { FiPlay, FiPause } from "react-icons/fi";
 import styles from "./Hobbies.module.css";
 
 export default function GalleryItem({ item }) {
   const videoRef = useRef(null);
+  // Set deliberately by the visitor via the pause/play control. The
+  // IntersectionObserver below must respect this — it never resumes a
+  // video the visitor paused themselves, but auto-pausing on scroll-out
+  // (not a user action) doesn't set this, so it still resumes on return.
+  const [userPaused, setUserPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (item.type !== "video") return;
+
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mql.matches);
+
+    const handleChange = (e) => setReducedMotion(e.matches);
+    mql.addEventListener("change", handleChange);
+    return () => mql.removeEventListener("change", handleChange);
+  }, [item.type]);
 
   useEffect(() => {
     if (item.type !== "video" || !item.src) return;
@@ -16,7 +35,14 @@ export default function GalleryItem({ item }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play();
+          if (!userPaused && !reducedMotion) {
+            video.play().catch(() => {
+              // Autoplay refused (e.g. a device power-saving mode) — fall
+              // back to the poster with the play control available rather
+              // than leaving an unhandled rejection.
+              setUserPaused(true);
+            });
+          }
         } else {
           video.pause();
         }
@@ -26,7 +52,20 @@ export default function GalleryItem({ item }) {
 
     observer.observe(video);
     return () => observer.disconnect();
-  }, [item.type, item.src]);
+  }, [item.type, item.src, userPaused, reducedMotion]);
+
+  const handleToggle = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      setUserPaused(false);
+      video.play().catch(() => setUserPaused(true));
+    } else {
+      setUserPaused(true);
+      video.pause();
+    }
+  };
 
   const renderMedia = () => {
     if (!item.src) {
@@ -43,17 +82,34 @@ export default function GalleryItem({ item }) {
 
     if (item.type === "video") {
       return (
-        <video
-          ref={videoRef}
-          className={styles.media}
-          src={item.src}
-          aria-label={item.caption}
-          muted
-          loop
-          playsInline
-          preload="none"
-          style={{ aspectRatio: item.aspectRatio }}
-        />
+        <>
+          <video
+            ref={videoRef}
+            className={styles.media}
+            src={item.src}
+            poster={item.poster}
+            aria-label={item.caption}
+            muted
+            loop
+            playsInline
+            preload="none"
+            style={{ aspectRatio: item.aspectRatio }}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+          />
+          <button
+            type="button"
+            className={styles.videoToggle}
+            onClick={handleToggle}
+            aria-label={isPlaying ? "pause video" : "play video"}
+          >
+            {isPlaying ? (
+              <FiPause aria-hidden="true" />
+            ) : (
+              <FiPlay aria-hidden="true" />
+            )}
+          </button>
+        </>
       );
     }
 
