@@ -2,13 +2,8 @@
 
 import { useState } from "react";
 import { FaStrava, FaDumbbell } from "react-icons/fa6";
+import { races } from "@/data/fitness";
 import styles from "./Fitness.module.css";
-
-const races = [
-  { name: "philadelphia marathon", year: 2024},
-  { name: "atlanta half-marathon", year: 2025},
-  { name: "dallas marathon", year: 2025},
-];
 
 export default function Fitness() {
   const [showHevy, setShowHevy] = useState(false);

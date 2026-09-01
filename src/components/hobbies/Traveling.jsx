@@ -6,37 +6,10 @@ import {
   Geographies,
   Geography,
 } from "react-simple-maps";
+import { visitedStates } from "@/data/travel";
 import styles from "./Traveling.module.css";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
-
-const visitedStates = [
-  "Maryland",
-  "New York",
-  "California",
-  "Connecticut",
-  "Delaware",
-  "Florida",
-  "Georgia",
-  "Hawaii",
-  "Illinois",
-  "Louisiana",
-  "Maine",
-  "Massachusetts",
-  "Michigan",
-  "New Jersey",
-  "North Carolina",
-  "Ohio",
-  "Pennsylvania",
-  "Rhode Island",
-  "South Carolina",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Virginia",
-  "Washington",
-  "West Virginia"
-];
 
 export default function Traveling() {
   const [tooltip, setTooltip] = useState("");

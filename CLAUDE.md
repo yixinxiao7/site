@@ -41,14 +41,16 @@ src/
 │       ├── GalleryGrid.jsx           # Masonry photo grid with header (shortest-column algorithm)
 │       ├── GalleryItem.jsx           # Image/video card with hover caption overlay
 │       ├── Hobbies.module.css        # Gallery grid + header styles
-│       ├── Fitness.jsx               # Fitness section — description, Strava/Hevy links, race list
+│       ├── Fitness.jsx               # Fitness section — description, Strava/Hevy links, race list (races from data/fitness.js)
 │       ├── Fitness.module.css
-│       ├── Traveling.jsx             # Traveling section — description + interactive US state map
+│       ├── Traveling.jsx             # Traveling section — description + interactive US state map (states from data/travel.js)
 │       └── Traveling.module.css
 ├── data/
-│   ├── experience.js                 # Work experience, education, contact data
+│   ├── experience.js                 # Work experience, education, projects, contact data
 │   ├── certifications.js             # Certifications data
-│   └── gallery.js                    # Gallery items — 22 images + 3 videos with aspect ratios
+│   ├── fitness.js                    # Races list (consumed by Fitness.jsx)
+│   ├── travel.js                     # Visited US states (consumed by Traveling.jsx)
+│   └── gallery.js                    # Gallery items — images (local) + videos (Cloudflare R2)
 public/
 ├── me.jpeg                           # Profile photo
 ├── Resume_2026.pdf                   # Downloadable resume
@@ -70,7 +72,7 @@ public/
 - **Hobbies page**: IBM Plex Mono, three sections:
   1. **Photo gallery**: Masonry grid using flexbox columns with a shortest-column distribution algorithm. Each section component contains its own header/description (self-contained pattern). Hover shows caption overlay.
   2. **Fitness**: 2/3 + 1/3 layout — left has description + Strava/Hevy icons (Hevy shows tooltip on hover), right has race list
-  3. **Traveling**: Full-width section — intro paragraph + interactive US map (react-simple-maps). Visited states filled with gold accent color, unvisited states dim. Hover tooltip follows cursor showing state name. States list maintained in `visitedStates` array.
+  3. **Traveling**: Full-width section — intro paragraph + interactive US map (react-simple-maps). Visited states filled with gold accent color, unvisited states dim. Hover tooltip follows cursor showing state name. States list maintained in `src/data/travel.js`.
 - **Nav**: Sticky top bar with backdrop blur, two tabs, active state gold underline
 
 ## Key Patterns
@@ -82,6 +84,11 @@ public/
 - **Video autoplay**: `GalleryItem` uses Intersection Observer to play/pause videos when in/out of viewport. Videos require `muted loop playsInline` attributes
 - **All text is lowercase**: The site uses lowercase throughout for a casual, personal tone
 - **Path alias**: `@/*` maps to `./src/*` (jsconfig.json)
+- **All content in `src/data/`**: Every updatable piece of content (experience, projects, certs, races, states, gallery) lives in a data file, not inside a component. Two exceptions: the hero headline/tagline in `Hero.jsx` and the page metadata in `layout.js`.
+- **Gallery media split**: Photos are local files in `public/gallery/`; videos are served from a Cloudflare R2 bucket (`pub-7318992f21894cb88abe6204c9561cc5.r2.dev`). Local `VID_*.mp4` files are pre-R2 leftovers.
+
+## Updating Content
+Use the `/update-site` skill (`.claude/skills/update-site/SKILL.md`) — it documents where each section lives and the formatting conventions for each (date formats, caption style, aspect-ratio derivation, lowercase rules).
 
 ## Content
 - **Name**: Yixin Xiao
@@ -90,9 +97,9 @@ public/
 - **Certification**: AWS Certified Solutions Architect — Associate
 - **Skills**: Full-stack, architectural/platform/data engineering, AWS, Databricks
 - **Contact**: yixinxiao7@gmail.com, linkedin.com/in/yixin-xiao, github.com/yixinxiao7
-- **Fitness**: Strava (athlete/119032446), Hevy (bigyeesh). Races: 2024 Philadelphia Marathon, 2025 Atlanta Half-Marathon, 2025 Dallas Marathon
+- **Fitness**: Strava (athlete/119032446), Hevy (bigyeesh). Races in `src/data/fitness.js`: 2024 Philadelphia Marathon, 2025 Atlanta Half-Marathon, 2025 Dallas Marathon
 - **Gallery**: 24 photos + 3 videos from NYC, Boston, Hawaii, China, Philadelphia, Seattle, San Francisco, etc.
-- **Traveling**: 25 visited US states tracked in `Traveling.jsx` `visitedStates` array (use full state names, e.g. "New York")
+- **Traveling**: 25 visited US states in `src/data/travel.js` `visitedStates` array (use full state names, e.g. "New York")
 
 ## Scripts
 ```
