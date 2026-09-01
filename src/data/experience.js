@@ -1,9 +1,16 @@
 export const experiences = [
   {
+    company: "Spotify",
+    title: "Full Stack Engineer",
+    location: "New York, NY",
+    period: "Aug 2026 — Present",
+    description: [],
+  },
+  {
     company: "Capital One",
     title: "Senior Software Engineer",
     location: "New York, NY",
-    period: "Jan 2024 — Present",
+    period: "Jan 2024 — Aug 2026",
     description: [
       "Architected Terraform-based CI/CD pipelines to provision Databricks infrastructure and AWS resources for a platform serving 10,000+ users, reducing annual incident rates by 60%",
       "Designed and launched a Governance SDK adopted by 5 cross-functional teams within 2 months, standardizing Databricks platform integrations and reducing duplicate implementation effort",
