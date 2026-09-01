@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           <div className={styles.heroText}>
             <h1 className={styles.heroName}>Yixin Xiao</h1>
-            <p className={styles.heroTitle}>Senior Software Engineer at Capital One</p>
+            <p className={styles.heroTitle}>Full Stack Engineer at Spotify</p>
             <div className={styles.heroDivider} />
             <p className={styles.heroTagline}>
               5 years of experience building backend, platform, and cloud
