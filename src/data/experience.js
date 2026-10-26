@@ -73,7 +73,7 @@ export const projects = [
     name: "Triplanner",
     subtitle: "Full-Stack Travel Planning App",
     description:
-      "Containerized travel planning app with React 18, Express, JWT authentication, Docker, and Nginx with TLS. Automated development workflows using LLM-powered multi-agent orchestration with integrated code review and QA testing.",
+      "Travel planning app with React 18 + Vite, Express, and PostgreSQL on Supabase. JWT auth with Google sign-in, Google Calendar export, and Gemini-powered PDF itinerary import. Frontend and API on Render, with a Cloudflare Worker keeping the API same-origin for Safari.",
     link: "https://github.com/yixinxiao7/triplanner",
     webapp: "https://triplanner.yixinx.com/",
     note: "built using the multi-agent framework above",
@@ -82,7 +82,7 @@ export const projects = [
     name: "Plant Guardians",
     subtitle: "AI-Powered Plant Care App",
     description:
-      "Plant care management app with React 18, Vite, Node.js, Express, and PostgreSQL. Track plant collections with photos, set custom watering and fertilizing schedules, view a care dashboard with overdue and upcoming tasks, and get AI-powered care advice via Google Gemini. Includes email reminders, care analytics, and activity streaks.",
+      "Plant care management app with React 18, Vite, Node.js, Express, and PostgreSQL on Supabase, hosted on Render. Track plant collections with photos, set custom watering and fertilizing schedules, view a care dashboard with overdue and upcoming tasks, and get AI-powered care advice via Google Gemini. Includes email reminders, care analytics, and activity streaks.",
     link: "https://github.com/yixinxiao7/plant_guardians",
     webapp: "https://plantguardians.yixinx.com/",
     note: "built using the multi-agent framework above",
@@ -91,7 +91,7 @@ export const projects = [
     name: "Diet Tracker",
     subtitle: "Serverless Nutrition Tracking App",
     description:
-      "Serverless nutrition tracker on AWS (Lambda, API Gateway, RDS PostgreSQL, Cognito) with OAuth 2.0 PKCE authentication. End-to-end CI/CD with GitHub Actions and automated Playwright testing.",
+      "Serverless nutrition tracker with a React 19 + Vite frontend and a Python FastAPI API on Vercel Functions, Supabase Postgres and Auth, and a nightly summary batch on Vercel Cron. CI with GitHub Actions and Playwright E2E tests.",
     link: "https://github.com/yixinxiao7/diet-tracker",
     webapp: "https://diet-tracker.yixinx.com/",
   },
